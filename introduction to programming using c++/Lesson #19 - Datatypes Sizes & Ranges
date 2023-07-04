@@ -1,4 +1,4 @@
-Sizes Progrme :
+//Sizes Progrme :
 
 #include <iostream>
 using namespace std;
@@ -22,7 +22,7 @@ int main()
 	return 0;
 }
 
-outpute of Sizes Progrme :
+//outpute of Sizes Progrme :
 
 The size of bool data type is 1 Byte
 The size of char data type is 1 Byte
@@ -33,7 +33,7 @@ The size of int long long data type is 8 Byte
 The size of float data type is 4 Byte
 The size of double data type is 8 Byte
 
-Ranges programe :
+//Ranges programe :
 
 #include <iostream>
 using namespace std;
@@ -68,7 +68,7 @@ int main()
 	return 0;
 }
 
-outpute of Ranges programe :
+//outpute of Ranges programe :
 
 **********************************************************************
 char Range : (-128, 127)
