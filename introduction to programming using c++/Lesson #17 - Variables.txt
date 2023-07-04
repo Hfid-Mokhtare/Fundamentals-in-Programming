@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	string FullName = "Mohammed Ali Zeggaf";
+	short age = 18;
+	string City = "tangier";
+	string Country = "Morocco";
+	float MonthySalary = 5000;
+	float YearlySalary = MonthSalary * 12;
+	char Grnder = 'M';
+	bool isMaried = false;
+
+	cout << "************************************\n";
+	cout << "Name : " << FullName << endl;
+	cout << "Age : " << age << " Years."<<endl;
+	cout << "City : " << City << endl;
+	cout << "Month Salary : " << MonthSalary << endl;
+	cout << "Yearly Salary : " << YearlySalary << endl;
+	cout << "Grnder : " << Grnder << endl;
+	cout << "Maried : " << Maried << endl;
+
+
+	cout << "************************************\n";
+
+
+
+
+	return 0;
+}
+
+-------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	
+	short Num1=20,Num2=30,Num3=10;
+	short total = Num1 + Num2 + Num3;
+	
+
+	cout << Num1<<"+"<<endl;
+	cout << Num2 <<"+" << endl;
+	cout << Num3 << endl;
+	cout << "----------------------"<< endl;
+	cout <<"total = "<< total << endl;
+
+	
+	return 0;
+}
+
+---------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	
+	short Age=25;
+	short add_to_age = 5;
+	
+	cout << "after "<< add_to_age <<" years you will be "<< Age + add_to_age <<" years old"<<endl;
+	
+	
+	return 0;
+}

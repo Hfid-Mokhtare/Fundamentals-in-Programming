@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	string FullName ;
+	short age ;
+	string City ;
+	string Country ;
+	float MonthlySalary ;
+	char Gender ;
+	bool isMarried ;
+
+	cout << "please enter your Full Name \n"; cin >> FullName;
+	cout << "please enter your age \n"; cin >> age;
+	cout << "please enter your City \n"; cin >> City;
+	cout << "please enter your Country \n"; cin >> Country;
+	cout << "please enter your Monthly Salary \n"; cin >> MonthlySalary;
+	cout << "please enter your Gender (M/F) \n"; cin >> Gender;
+	cout << "are you maried ? (true/false) \n"; cin >> isMarried;
+
+	float YearlySalary = MonthlySalary * 12;
+
+	cout << "************************************\n";
+	cout << "Name : " << FullName << endl;
+	cout << "Age : " << age << " Years." << endl;
+	cout << "City : " << City << endl;
+	cout << "Country : " << Country << endl;
+	cout << "Month Salary : " << MonthlySalary << endl;
+	cout << "Yearly Salary : " << YearlySalary << endl;
+	cout << "Gender : " << Gender << endl;
+	cout << "Married : " << isMarried << endl;
+
+
+	cout << "************************************\n";
+
+
+
+
+	return 0;
+}
+
+------------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+	short Num1 , Num2 , Num3 ;
+	
+
+	cout << "please enter teh first number : "; cin >> Num1;
+	cout << "please enter teh second number : "; cin >> Num2;
+	cout << "please enter teh third number : "; cin >> Num3;
+
+	int total = Num1 + Num2 + Num3;
+
+
+	cout << Num1 << "+" << endl;
+	cout << Num2 << "+" << endl;
+	cout << Num3 << endl;
+	cout << "----------------------" << endl;
+	cout << "total = " << total << endl;
+
+
+	return 0;
+}
+
+------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+
+	short Age ;
+	int add_to_age = 5;
+
+	cout << "please enter your age : "; cin >> Age;
+
+	cout << "after " << add_to_age << " years you will be " << Age + add_to_age << " years old" << endl;
+
+
+	return 0;
+}
+
