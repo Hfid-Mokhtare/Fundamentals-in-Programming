@@ -1,2 +1,1 @@
-# My-foundation-in-programming
-General foundation in the world of programming
+Fundamentals of programming step by step to professionalism 
