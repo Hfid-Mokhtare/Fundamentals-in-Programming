@@ -1,1 +1,7 @@
+C++ comments
+ comments can be used to explain c++ code, and to make it more readable. 
+ comments can be single-lined or multi-lined.
+
+ for short comments use single-line (//).
+ for long comments use multi-line(/**/).
 
