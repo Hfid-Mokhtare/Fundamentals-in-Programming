@@ -1,4 +1,4 @@
-Q1 :
+//Q1 :
 
 #include <iostream>
 using namespace std;
@@ -45,7 +45,7 @@ int main()
 
 ===========================================================================
 
-Q2 :
+//Q2 :
 
 #include <iostream>
 using namespace std;
@@ -76,7 +76,7 @@ int main()
 
 ===========================================================================
 
-Q3 :
+//Q3 :
 
 #include <iostream>
 using namespace std;
