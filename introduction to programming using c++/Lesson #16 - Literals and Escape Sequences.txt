@@ -1,3 +1,20 @@
+What is Literals ?
+ Literals are data used for representing fixed values .They can be used 
+ directly in the code.
+Literal Types :
+ 1 Integer literas
+ 2 Floating-point literals
+ 3 Characters literals
+ 4 Escape sequences literals
+Some Escape Sequences :
+  \\     Backslash
+  \t     Tab
+  \n     Newline
+  \"     Singke quote
+  \a     Audio bell
+
+===========================================================================
+
 #include <iostream>
 using namespace std;
 
