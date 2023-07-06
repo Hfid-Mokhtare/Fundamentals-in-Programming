@@ -1,0 +1,58 @@
+// Q1 :
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void MyCartInfo()
+{
+	cout << "*********************************************************\n";
+
+	cout << "Name : Mohammed Ali Zeggaf.\n";
+	cout << "Age : 18 Years.\n";
+	cout << "City : tangier\n";
+	cout << "Country : Morocco\n";
+
+	cout << "*********************************************************\n\n";
+}
+
+void PrintStarsScuire()
+{
+	cout << "************\n";
+	cout << "************\n";
+	cout << "************\n";
+	cout << "************\n";
+	cout << "************\n\n";
+
+	cout << "*********************************************************\n\n";
+}
+
+void MyTextFunction()
+{
+	cout << "I promise to be the best developer ever!\n\n";
+	cout << "I know it will take some time to practice ,but I will achieve my goal.\n\n";
+
+	cout << "*********************************************************\n\n";
+
+}
+
+void PrintHfunction()
+{
+
+	cout << "*       *\n";
+	cout << "*       *\n";
+	cout << "*********\n";
+	cout << "*       *\n";
+	cout << "*       *\n";
+}
+
+int main()
+{
+	MyCartInfo();
+	PrintStarsScuire();
+	MyTextFunction();
+	PrintHfunction();
+
+  return 0;
+}
