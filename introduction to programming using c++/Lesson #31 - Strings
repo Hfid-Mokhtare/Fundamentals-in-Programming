@@ -1,0 +1,27 @@
+// Q1 :
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string Nam_str1, str2, str3;
+
+	cout << "please enter your name : "; getline(cin, Nam_str1);
+	cout << "please enter  number1 : "; cin >> str2;
+	cout << "please enter  number2 : "; cin >> str3;
+
+	cout << "***********************************************\n";
+
+	cout << "The Length of String1 is : " << Nam_str1.length()<<endl;
+	cout << "Character at 0, 2, 4, 7 are : " << Nam_str1[0] << Nam_str1[2] << Nam_str1[4] << Nam_str1[7] << endl;
+	cout << "Concatenating String2 and String3 = " << str2 + str3 << endl;
+
+	int multiplication = stoi(str2) * stoi(str3);
+
+	cout << str2 << " * " << str3 << " = " << multiplication << endl;
+
+  return 0;
+}
