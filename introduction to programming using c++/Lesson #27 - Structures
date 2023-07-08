@@ -40,7 +40,7 @@ int main()
 	StMyCartInfo MyCartInfo;
 
 	cout << "(((())))(((((())))))((())(()))))(())))()))))(((((())))\n";
-	cout << "enter your FullName : "; cin >> MyCartInfo.PersonalInfo.FullName;
+	cout << "enter your FullName : "; getline(cin, MyCartInfo.PersonalInfo.FullName);
 	cout << " enter your age : "; cin >> MyCartInfo.PersonalInfo.age;
 	cout << "enter your Gender (M/F) : "; cin >> MyCartInfo.PersonalInfo.Gender;
 	cout << "enter your Married (1/0) : "; cin >> MyCartInfo.PersonalInfo.Married;
