@@ -1,0 +1,111 @@
+//Problem #33 :
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+
+short ReadGrade()
+{
+	short Grade;
+	cout << " Please enter your Grade  : "; cin >> Grade;
+	return Grade;
+}
+
+
+void CheckGrade(short Grade)
+{
+	
+	
+	if (Grade >= 90)
+	{
+		cout << " A " << endl;
+	}
+	else if(Grade >= 80)
+	{
+		cout << " B " << endl;
+	}
+	else if (Grade >= 70)
+	{
+		cout << " C " << endl;
+	}
+	else if (Grade >= 60)
+	{
+		cout << " D " << endl;
+	}
+	else if (Grade >= 50)
+	{
+		cout << " E " << endl;
+	}
+	else
+	{
+		cout << " F " << endl;
+	}
+}
+
+int main()
+{
+
+	CheckGrade(ReadGrade());
+	
+	return 0;
+}
+
+=============================================================================
+
+//Problem #33 :
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+
+float ReadTotalSale()
+{
+	float TotalSale;
+	cout << " Please enter The Total Sales  : "; cin >> TotalSale;
+	return TotalSale;
+}
+
+
+float CheckTotalSale (float TotalSale)
+{
+	
+	
+	if (TotalSale >= 1000000)
+	{
+		return TotalSale*0.01;
+	}
+	else if(TotalSale >= 500000)
+	{
+		return TotalSale*0.02;
+	}
+	else if (TotalSale >= 100000)
+	{
+		return TotalSale*0.03;
+	}
+	else if (TotalSale >= 50000)
+	{
+		return TotalSale*0.05;
+	}
+	else
+	{
+		return TotalSale;
+	}
+}
+
+
+
+int main()
+{
+
+	cout << CheckTotalSale(ReadTotalSale());
+	
+	return 0;
+}
+
+=============================================================================
+
+//Problem #33 :
