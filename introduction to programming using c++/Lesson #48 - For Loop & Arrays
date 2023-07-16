@@ -1,0 +1,62 @@
+\\Exemple :
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+short ReadLength(string message)
+{
+	
+	short Length;
+	cout << message; cin >> Length;
+	return Length;
+}
+
+void ReadArryData(short Length, float Arr[100])
+{
+	for (int i = 0; i <= Length-1; i++)
+	{
+		cout << "Please enter Number " << i+1 << " : "; cin >> Arr[i];
+	}
+}
+
+void PrintArryData(short Length, float Arr[100])
+{
+	for (int i = 0; i <= Length-1; i++)
+	{
+		cout << "Number [" << i+1 << "] : " << Arr[i]<<endl;
+	}
+	cout << "\n*******************************************\n";
+}
+
+float CalculeSumOfArr(short Length, float Arr[100])
+{
+	float sum=0;
+	for (int i = 0; i <= Length-1; i++)
+	{
+		sum += Arr[i];
+	}
+	cout << "sum : " << sum << endl;
+	return sum;
+}
+
+void CalculeAverageOfArr(short Length, float sum)
+{
+	float Average = sum / Length;
+	cout << "Average : " << Average << endl;
+}
+
+
+int main()
+{
+	float Arr[100];
+	short Length = ReadLength("How Many Numbers do you want to enter ? 1 to 100 \n");
+	ReadArryData(Length, Arr);
+	PrintArryData(Length, Arr);
+	CalculeAverageOfArr(Length,CalculeSumOfArr(Length, Arr));
+
+	return 0; 
+}
+================================================================================
+
