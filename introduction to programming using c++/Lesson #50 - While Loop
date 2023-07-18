@@ -209,8 +209,52 @@ int main()
 
 ===================================================================
 
-// Problem #37 :
-??????????????
+// Problem #37 :(i soleve this problem after i check the break lesson)
+#include <iostream>
+
+using namespace std;
+
+using namespace std;
+
+int ReadNum()
+{
+	int Num;
+	cout << "enter the number : ";
+	cin >> Num;
+
+	return Num;
+}
+
+int Check_Num_In_Range()
+{
+	int Num;
+	int Sum = 0;
+	int counter = 1;
+
+	do
+	{
+		Num = ReadNum();
+
+		if (Num == -99)
+		{
+			cout << "programme is going to stop..";
+	        return Sum;
+			break;
+		}
+
+		Sum = Sum + Num;
+	} while (Num != -99);
+	
+
+}
+
+int main()
+{
+	
+	cout << Check_Num_In_Range();
+			
+	return 0;
+}
 
 ===================================================================
 
@@ -244,5 +288,55 @@ int main()
 
 ===================================================================
 
-// Problem #50 :
-????????????????????
+// Problem #50 (i soleve this problem after i check the break lesson):
+#include <iostream>
+
+using namespace std;
+
+using namespace std;
+
+int Read_Pin()
+{
+	int Num;
+	cout << "enter the PIN : ";
+	cin >> Num;
+
+	return Num;
+}
+
+void Check_Pin()
+{
+	const int Pin =1234;
+	int Entered_Pin;
+	int Tht_Clien_Balance = 7500;
+	int counter = 1;
+
+	do
+	{
+		Entered_Pin = Read_Pin();
+
+		if (Entered_Pin == Pin)
+		{
+		    system("color 3F");
+			cout << "Your Balance is : " << Tht_Clien_Balance<<endl;
+			break;
+		}
+		else
+		{
+			cout << " Wrongue PIN \n";
+			counter++;
+		}
+
+		
+	} while (counter<=3);
+	
+
+}
+
+int main()
+{
+	
+   Check_Pin();
+			
+	return 0;
+}
