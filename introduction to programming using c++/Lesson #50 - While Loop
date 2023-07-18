@@ -225,7 +225,7 @@ int ReadNum()
 	return Num;
 }
 
-int Check_Num_In_Range()
+int SumNumbers()
 {
 	int Num;
 	int Sum = 0;
@@ -251,7 +251,7 @@ int Check_Num_In_Range()
 int main()
 {
 	
-	cout << Check_Num_In_Range();
+	cout << SumNumbers();
 			
 	return 0;
 }
