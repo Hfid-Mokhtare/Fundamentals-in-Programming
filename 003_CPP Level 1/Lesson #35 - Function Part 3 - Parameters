@@ -155,7 +155,7 @@ float Calcule_of_CircleArea(float Radius)
 
 void PrintCircleArea( float RectangleArea)
 {
-	cout << "the Rectangle Area is : "<<RectangleArea;
+	cout << "the Circle Area is : "<<RectangleArea;
 }
 
 int main()
@@ -187,16 +187,16 @@ float Calcule_of_CircleArea(float Diameter)
 
 }
 
-void PrintCircleArea( float RectangleArea)
+void PrintCircleArea( float CircleArea)
 {
-	cout << "the Rectangle Area is : "<<RectangleArea;
+	cout << "the Circle Area is : "<<CircleArea;
 }
 
 int main()
 {
 	float Diameter;
 	
-	cout << "please enter the Radius : "; cin >> Diameter;
+	cout << "please enter the Diameter : "; cin >> Diameter;
 
 	PrintCircleArea(Calcule_of_CircleArea(Diameter));
 	
