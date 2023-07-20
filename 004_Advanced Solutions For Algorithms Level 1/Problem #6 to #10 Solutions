@@ -1,0 +1,209 @@
+//Problem #6 :
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum enOrder_of_Full_Name { FirsrName_LastName = 0, LastName_FirsrName = 1 };
+
+struct stInfo
+{
+	
+	string First_Name;
+	string Last_Name;
+	string FullName;
+};
+
+stInfo Read_Info()
+{
+	stInfo Info;
+
+	cout << "Please enter your First Name : "; getline(cin, Info.First_Name);
+	cout << "Please enter your Last Name : "; getline(cin, Info.Last_Name);
+
+	return Info;
+}
+
+stInfo concatenate_First_Name_and_Last_Name(stInfo Info,bool Reversed)
+{
+	if (Reversed== enOrder_of_Full_Name::FirsrName_LastName)
+
+		Info.FullName = Info.First_Name + " " + Info.Last_Name;
+
+	else
+		Info.FullName = Info.Last_Name + " " + Info.First_Name;
+
+	return Info;
+}
+
+void Print_FullName(stInfo Info)
+{
+	cout << "Your FullName is : " << Info.FullName << endl;
+}
+
+int main()
+{
+	
+	 Print_FullName(concatenate_First_Name_and_Last_Name(Read_Info(), enOrder_of_Full_Name::FirsrName_LastName));
+
+	return 0;
+}
+===============================================================================================
+
+//Problem #7 :
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadNum()
+{
+	int Num = 0;
+	cout << "enter the number : ";
+	cin >> Num;
+	return Num;
+}
+
+float Calcul_Half_of_Num(int Num)
+{
+	return (float)Num / 2;
+}
+
+
+void PrintResult(int Num)
+{
+	string Result = "The Half of " + to_string(Num) + " is : " + to_string(Calcul_Half_of_Num(Num));
+	cout << Result;
+}
+
+int main()
+{
+	PrintResult(ReadNum());
+
+	return 0;
+}
+
+===============================================================================================
+
+//Problem #8 :
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum enPass_or_Fail { Fail = 0, Pass = 1 };
+
+int ReadMark()
+{
+	int Mark = 0;
+	cout << "enter the Mark : ";
+	cin >> Mark;
+	return Mark;
+}
+
+enPass_or_Fail Check_Mark(int Mark)
+{
+	if (Mark>=50)
+		return enPass_or_Fail::Fail;
+	else	
+		return enPass_or_Fail::Pass;
+	
+}
+
+
+void PrintResult(int Mark)
+{
+	if (Check_Mark(Mark)== enPass_or_Fail::Pass)
+		cout << "\nYou Pass";
+	else 
+		cout << "\nYou Fail";
+}
+
+int main()
+{
+	PrintResult(ReadMark());
+
+	return 0;
+}
+
+===============================================================================================
+
+//Problem #9 :
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void ReadNumbers(int& Num1,int& Num2,int& Num3)
+{
+	
+	cout << "please enter the first number : "; cin >> Num1;
+	cout << "please enter the second number : "; cin >> Num2;
+	cout << "please enter the third number : "; cin >> Num3;
+	 
+}
+
+int SumOf3Numbers(int Num1, int Num2, int Num3)
+{
+
+	return  Num1 + Num2 + Num3;
+}
+
+void PrintResult(int Total)
+{
+	cout <<"The Total sum of numbers is : "<< Total;
+}
+
+int main()
+{
+	int Num1,Num2,Num3;
+
+	ReadNumbers(Num1, Num2, Num3);
+
+    PrintResult(SumOf3Numbers(Num1, Num2, Num3));
+
+	return 0;
+}
+
+===============================================================================================
+
+//Problem #10 :
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void ReadMarks(int& Mark1, int& Mark2, int& Mark3)
+{
+	cout << "please enter the first Mark : "; cin >> Mark1;
+	cout << "please enter the second Mark : "; cin >> Mark2;
+	cout << "please enter the third Mark : "; cin >> Mark3;
+}
+
+
+int SumOf3Marks(int Mark1, int Mark2, int Mark3)
+{
+
+	return Mark1 + Mark2 + Mark3;
+}
+
+float CalculateAverage(int Mark1, int Mark2, int Mark3)
+{
+	return (float)SumOf3Marks(Mark1, Mark2, Mark3) / 3;
+}
+
+void PrintResult(float Average)
+{
+	cout <<"The Average is : "<< Average;
+}
+
+int main()
+{
+	int Mark1, Mark2, Mark3;
+
+	ReadMarks(Mark1, Mark2, Mark3);
+
+    PrintResult(CalculateAverage(Mark1, Mark2, Mark3));
+
+	return 0;
+}
