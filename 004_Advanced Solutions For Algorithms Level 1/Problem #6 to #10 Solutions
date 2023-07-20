@@ -104,9 +104,9 @@ int ReadMark()
 enPass_or_Fail Check_Mark(int Mark)
 {
 	if (Mark>=50)
-		return enPass_or_Fail::Fail;
-	else	
 		return enPass_or_Fail::Pass;
+	else	
+		return enPass_or_Fail::Fail;
 	
 }
 
