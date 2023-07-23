@@ -229,7 +229,7 @@ int SumNumbers()
 {
 	int Num;
 	int Sum = 0;
-	int counter = 1;
+	
 
 	do
 	{
