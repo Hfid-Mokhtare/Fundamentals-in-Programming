@@ -195,7 +195,6 @@ int main()
 =====================================================================================
 
 //Problem #45 :
-//Problem #45 :
 #include <iostream>
 #include <string>
 
@@ -208,7 +207,7 @@ short ReadNumOFMonth()
 {
 	short NumOFMonth;
 
-	cout << " enter Number OF Day : "; cin >> NumOFMonth;
+	cout << " enter Number OF Month : "; cin >> NumOFMonth;
 
 	return NumOFMonth;
 
@@ -231,12 +230,12 @@ void CheckNumOFMonth(short NumOFMonth)
 		
 			case enMonth::march:
 				system("color 3F");
-				cout << "Wednesday";
+				cout << "March";
 				break;
 		
 			case enMonth::aprile:
 				system("color 3F");
-				cout << "march";	
+				cout << "Aprile";	
 				break;
 		
 			case enMonth::may:
