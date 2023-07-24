@@ -290,9 +290,6 @@ int main()
 
 // Problem #50 (i soleve this problem after i check the break lesson):
 #include <iostream>
-
-using namespace std;
-
 using namespace std;
 
 int Read_Pin()
