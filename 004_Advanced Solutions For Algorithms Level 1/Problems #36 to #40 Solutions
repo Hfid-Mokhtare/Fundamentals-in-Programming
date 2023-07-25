@@ -1,4 +1,4 @@
-//Problem #36 :
+//Problem #36 : Simple Calculator
 #include <iostream>
 #include <string>
 
@@ -65,7 +65,7 @@ int main()
 
 ===========================================================================
 
-//Problem #37 :
+//Problem #37 : Sum Until -99
 #include <iostream>
 #include <string>
 
@@ -112,7 +112,7 @@ int main()
 
 ===========================================================================
 
-//Problem #38 :
+//Problem #38 : Is Prime Number
 #include <iostream>
 #include <string>
 
@@ -173,8 +173,8 @@ int main()
 
 ===========================================================================
 
-//Problem #39 :
-#include <iostream>
+//Problem #39 : Pay remainder
+#include <iostream> 
 using namespace std;
 
 float ReadPositiveNumber(string Message)
@@ -216,7 +216,7 @@ int main()
 
 ===========================================================================
 
-//Problem #40 :
+//Problem #40 : Service Fee and Sales Tax
 #include <iostream>
 using namespace std;
 
