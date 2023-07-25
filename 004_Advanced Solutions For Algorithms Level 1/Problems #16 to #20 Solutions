@@ -1,4 +1,4 @@
-//Problem #16 :
+//Problem #16 :  Rectagle Area Through Diagonal and Side Area
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -35,7 +35,7 @@ int main()
 
 ===========================================================================================
 
-//Problem #17 :
+//Problem #17 : Triangle Area
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -71,8 +71,8 @@ int main()
 
 ===========================================================================================
 
-//Problem #18 :
-#include <iostream>
+//Problem #18 : Circle Area
+#include <iostream> 
 #include <cmath>
 #include <string>
 
@@ -106,7 +106,7 @@ int main()
 
 ===========================================================================================
 
-//Problem #19 :
+//Problem #19 : Circle Area Through Diameter
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -141,7 +141,7 @@ int main()
 }
 ===========================================================================================
 
-//Problem #20 :
+//Problem #20 : Circke Area Inscribed in a Square
 #include <iostream>
 #include <cmath>
 #include <string>
