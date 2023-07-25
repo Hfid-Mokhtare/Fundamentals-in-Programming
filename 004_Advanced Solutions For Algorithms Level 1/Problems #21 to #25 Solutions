@@ -1,4 +1,4 @@
-//Problem #21 : 
+//Problem #21 : Circle Area Along the Circumference
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -34,7 +34,7 @@ int main()
 
 =======================================================================================
 
-//Problem #22 : 
+//Problem #22 : Circle Area Inscribed in an Isosceles Triangle
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -72,7 +72,7 @@ int main()
 
 =======================================================================================
 
-//Problem #23 : 
+//Problem #23 : Circle Area Described Around an Arbitrary Tuiangle
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -111,7 +111,7 @@ int main()
 
 =======================================================================================
 
-//Problem #24 : 
+//Problem #24 : Validate Age Between 18 and 45
 #include <iostream>
 #include <string>
 
@@ -148,7 +148,7 @@ int main()
 
 =======================================================================================
 
-//Problem #25 : 
+//Problem #25 : Read Untill Age Between 18 and 45
 #include <iostream>
 #include <string>
 
