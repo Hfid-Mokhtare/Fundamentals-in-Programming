@@ -1,4 +1,4 @@
-//Problem #41 :
+//Problem #41 : Weeks and Days
 #include <iostream>
 using namespace std;
 
@@ -49,7 +49,7 @@ int main()
 
 =========================================================================================
 
-//Problem #42 :
+//Problem #42 : Task Duration In Seconds
 #include <iostream>
 #include <string>
 
@@ -118,8 +118,8 @@ int main()
 
 =========================================================================================
 
-//Problem #43 :
-#include <iostream>
+//Problem #43 : Seconds to Days,Hours,Minutes,Seconds
+#include <iostream> 
 #include <string>
 
 using namespace std;
@@ -192,7 +192,7 @@ int main()
 
 =========================================================================================
 
-//Problem #44 :
+//Problem #44 : Day of Week
 #include <iostream>
 #include <string>
 
@@ -252,7 +252,7 @@ int main()
 
 =========================================================================================
 
-//Problem #45 :
+//Problem #45 : Month of Year
 #include <iostream>
 #include <string>
 
