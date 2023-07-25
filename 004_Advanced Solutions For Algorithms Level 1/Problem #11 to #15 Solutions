@@ -1,4 +1,4 @@
-//Problem #11 :
+//Problem #11 : Average Pass Fail
 #include <iostream>
 #include <string>
 
@@ -65,7 +65,7 @@ int main()
 
 ==============================================================================
 
-//Problem #12 :
+//Problem #12 : Max of 2 Numbers
 #include <iostream>
 #include <string>
 
@@ -106,7 +106,7 @@ int main()
 
 ==============================================================================
 
-//Problem #13 :
+//Problem #13 : Max of 3 Numbers
 #include <iostream>
 #include <string>
 
@@ -157,7 +157,7 @@ int main()
 
 ==============================================================================
 
-//Problem #14 :
+//Problem #14 : Swap Numbers
 #include <iostream>
 #include <string>
 
@@ -212,7 +212,7 @@ int main()
 
 ==============================================================================
 
-//Problem #15 :
+//Problem #15 : Rectagle Area
 #include <iostream>
 
 using namespace std;
