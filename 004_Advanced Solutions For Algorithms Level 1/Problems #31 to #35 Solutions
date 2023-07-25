@@ -1,4 +1,4 @@
-// Problem #31 :
+// Problem #31 : Power of 2,3,4
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -31,7 +31,7 @@ int main()
 
 ====================================================================
 
-// Problem #32 :
+// Problem #32 : Power of M
 #include <iostream>
 #include <string>
 
@@ -79,7 +79,7 @@ int main()
 
 ====================================================================
 
-// Problem #33 :
+// Problem #33 : Grade A,B,C,D,E,F
 #include <iostream>
 #include <string>
 
@@ -141,7 +141,7 @@ int main()
 
 ====================================================================
 
-// Problem #34 :
+// Problem #34 : Commission Percentage
 #include <iostream>
 #include <string>
 
@@ -194,7 +194,7 @@ int main()
 
 ====================================================================
 
-// Problem #35 :
+// Problem #35 : Piggy Bank Calculator
 #include <iostream>
 #include <string>
 
