@@ -1,4 +1,4 @@
-// Problem #46 :
+// Problem #46 : Print Letters from A to Z
 #include <iostream>
 #include <string>
 
@@ -24,7 +24,7 @@ int main()
 
 =====================================================
 
-// Problem #47 :
+// Problem #47 : Loan Instalment Months
 #include <iostream>
 using namespace std;
 
@@ -60,7 +60,7 @@ int main()
 
 =====================================================
 
-// Problem #48 :
+// Problem #48 : Monthly Loan Installment
 #include <iostream>
 using namespace std;
 
@@ -96,8 +96,8 @@ int main()
 
 =====================================================
 
-// Problem #49 :
-#include <iostream>
+// Problem #49 : ATM PIN
+#include <iostream> 
 #include <string>
 
 using namespace std;
@@ -149,7 +149,7 @@ int main()
 
 =====================================================
 
-// Problem #50 :
+// Problem #50 : ATM PIN 3 Times
 #include <iostream>
 #include <string>
 
