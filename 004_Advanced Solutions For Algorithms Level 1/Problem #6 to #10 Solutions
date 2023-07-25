@@ -1,4 +1,4 @@
-//Problem #6 :
+//Problem #6 : FullName
 #include <iostream>
 #include <string>
 
@@ -50,7 +50,7 @@ int main()
 }
 ===============================================================================================
 
-//Problem #7 :
+//Problem #7 : Half Number
 #include <iostream>
 #include <string>
 
@@ -85,7 +85,7 @@ int main()
 
 ===============================================================================================
 
-//Problem #8 :
+//Problem #8 : Pass/Fail
 #include <iostream>
 #include <string>
 
@@ -128,7 +128,7 @@ int main()
 
 ===============================================================================================
 
-//Problem #9 :
+//Problem #9 : Sum of 3 Numbers
 #include <iostream>
 #include <string>
 
@@ -167,7 +167,7 @@ int main()
 
 ===============================================================================================
 
-//Problem #10 :
+//Problem #10 : Average of 3 Marks
 #include <iostream>
 #include <string>
 
