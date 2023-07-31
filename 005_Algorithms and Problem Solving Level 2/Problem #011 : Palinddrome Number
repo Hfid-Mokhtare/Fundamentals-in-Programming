@@ -4,7 +4,6 @@
 
 using namespace std;
 
-enum enPlindromeOrNot { Plindrome = 1, NotPlindrome = 2 };
 
 long long ReadPositiveNumber(string Message)
 {
@@ -53,7 +52,6 @@ int main()
 
 using namespace std;
 
-enum enPlindromeOrNot { Plindrome = 1, NotPlindrome = 2 };
 
 int ReadPositiveNumber(string Message)
 {
