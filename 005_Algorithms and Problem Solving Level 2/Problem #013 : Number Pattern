@@ -4,7 +4,6 @@
 
 using namespace std;
 
-enum enPlindromeOrNot { Plindrome = 1, NotPlindrome = 2 };
 
 int ReadPositiveNumber(string Message)
 {
@@ -18,7 +17,7 @@ int ReadPositiveNumber(string Message)
 	return Number;
 }
 
-void PrintInvertedNumberPattern(int Number)
+void PrintNumberPattern(int Number)
 {
 	cout << "\n";
 
@@ -35,7 +34,7 @@ void PrintInvertedNumberPattern(int Number)
 
 int main()
 {
-	PrintInvertedNumberPattern(ReadPositiveNumber("Please Enter a Positive Number : "));
+	PrintNumberPattern(ReadPositiveNumber("Please Enter a Positive Number : "));
 
 	
 
@@ -50,7 +49,6 @@ int main()
 
 using namespace std;
 
-enum enPlindromeOrNot { Plindrome = 1, NotPlindrome = 2 };
 
 int ReadPositiveNumber(string Message)
 {
@@ -64,7 +62,7 @@ int ReadPositiveNumber(string Message)
 	return Number;
 }
 
-void PrintInvertedNumberPattern(int Number)
+void PrintNumberPattern(int Number)
 {
 	cout << "\n";
 
@@ -81,7 +79,7 @@ void PrintInvertedNumberPattern(int Number)
 
 int main()
 {
-	PrintInvertedNumberPattern(ReadPositiveNumber("Please Enter a Positive Number : "));
+	PrintNumberPattern(ReadPositiveNumber("Please Enter a Positive Number : "));
 
 	
 
