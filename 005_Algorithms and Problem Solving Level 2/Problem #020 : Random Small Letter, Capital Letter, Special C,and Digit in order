@@ -69,11 +69,11 @@ int PrintRandomNumber(int From, int To)
 
 enum enCharType { SmallLetter = 1, CapitalLetter = 2, SpecialC = 3, Digit = 4 };
 
-char GetRandomCharacter(enCharType Caracter)
+char GetRandomCharacter(enCharType CharType)
 {
 	
 
-	switch (Caracter)
+	switch (CharType)
 	{
 	case enCharType::CapitalLetter:
 		return char(PrintRandomNumber(65,90));
