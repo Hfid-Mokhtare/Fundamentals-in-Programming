@@ -100,7 +100,7 @@ void ReadArray(int Arr[100],int & arrLength)
 	
 	cout << "\nEnter array elements : \n";
 
-	for (int i = 0; i <= arrLength; i++)
+	for (int i = 0; i <= arrLength-1; i++)
 	{
 		cout << "Element[" << i+1 << "] : ";
 		cin >> Arr[i];
@@ -122,7 +122,7 @@ int TimesRepeated(int Arr[100],short NumberToCheck, int arrLength)
 {
 	int Counter = 0;
 
-	for (int i = 0; i <= arrLength-1; i++);
+	for (int i = 0; i <= arrLength-1; i++)
 	{
 		
 		if (NumberToCheck == Arr[i])
@@ -149,7 +149,7 @@ int main()
 
 	cout << "\nNumber " << NumberToCheck;
 	cout << "Is Repeated : ";
-	cout <<	TimesRepeated(Arr, NumberToCheck, arrLength) << " Time(s)";
+	cout <<	TimesRepeated(Arr, NumberToCheck, arrLength) << " Time(s)\n";
 
 	
 	return 0;
