@@ -4,18 +4,6 @@
 
 using namespace std;
 
-int ReadPositiveNumber(string Message)
-{
-	int Number = 0;
-	do
-	{
-		cout << Message << endl;
-		cin >> Number;
-	} while (Number <= 0);
-
-	return Number;
-}
-
 int PrintRandomNumber(int From, int To)
 {
 	int RandNum = rand() % (To - From + 1) + From;
@@ -66,18 +54,6 @@ int main()
 #include <string>
 
 using namespace std;
-
-int ReadPositiveNumber(string Message)
-{
-	int Number = 0;
-	do
-	{
-		cout << Message << endl;
-		cin >> Number;
-	} while (Number <= 0);
-
-	return Number;
-}
 
 int PrintRandomNumber(int From, int To)
 {
