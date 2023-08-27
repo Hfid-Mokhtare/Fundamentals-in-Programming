@@ -148,7 +148,7 @@ int main()
 	PrintArray(Arr, arrLength);
 
 	cout << "\nNumber " << NumberToCheck;
-	cout << "Is Repeated : ";
+	cout << " Is Repeated : ";
 	cout <<	TimesRepeated(Arr, NumberToCheck, arrLength) << " Time(s)\n";
 
 	
