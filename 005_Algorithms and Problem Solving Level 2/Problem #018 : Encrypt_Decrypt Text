@@ -74,8 +74,6 @@ int main()
 
 using namespace std;
 
-int EncryptionKey = 10;
-
 string ReadText()
 {
 	string Text = "";
