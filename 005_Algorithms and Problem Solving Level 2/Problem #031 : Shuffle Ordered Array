@@ -137,7 +137,6 @@ int GetRandomNumber(int From, int To)
 
 void FillArrayWithNumbersIn_Order(int Arr[100], int &arrLength)
 {
-	arrLength = ReadPositiveNumber("\nPlease Enter the Number of Element : \n");
 
 	for (int i = 0; i < arrLength; i++)
 	{
@@ -165,7 +164,7 @@ void Swap_Numbers(int& Num1, int& Num2)
 	Num2 = Temp;
 }
 
-void ShuffleTheArray(int Arr[100], int Arr2[100], int arrLength)
+void ShuffleTheArray(int Arr[100], int arrLength)
 {
 	
 
@@ -182,15 +181,15 @@ int main()
 	//Seeds the random number generator in C++, called only once
 	srand((unsigned)time(NULL));
 
-	int Arr[100], Arr2[100], arrLength;
-	 
+	int Arr[100];
+	int arrLength= ReadPositiveNumber("\nPlease Enter the Number of Element : \n");
 
 	FillArrayWithNumbersIn_Order(Arr, arrLength);
 
 	cout << "\nArray Elements befor shuffling : ";
 	PrintArray(Arr, arrLength);
 
-	ShuffleTheArray(Arr, Arr2, arrLength);
+	ShuffleTheArray(Arr, arrLength);
 
 	cout << "\nArray Elements befor shuffling : ";
 	PrintArray(Arr, arrLength);
