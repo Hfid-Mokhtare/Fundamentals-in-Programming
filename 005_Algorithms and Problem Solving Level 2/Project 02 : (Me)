@@ -17,6 +17,8 @@ struct stQuestionInfo
 
 struct stGameResults
 {
+	stQuestionInfo QuestionInfo;
+
 	short GameQuestions = 0;
 	short NumberOfRightAnswers = 0;
 	short NumberOfWrongAnswers = 0;
@@ -33,21 +35,21 @@ struct stGameResults
 int ReadThePlayerAnswer()
 {
 	int PlayerAnswer = 0;
-	
+
 	cin >> PlayerAnswer;
 	return PlayerAnswer;
 }
 
-short GetRandomNumber(enQuestionLevel QuestionLevel)
+short GetRandomNumber(stGameResults GameResults)
 {
 	//Function to generate a random number
 	//QuestionLevel : Easy = 1, Med = 2, Hard = 3, Mix = 4
 
 	int RandNum = 0;
 
-	switch (QuestionLevel)
+	switch (GameResults.QuestionLevel)
 	{
-	case enQuestionLevel::Easy :// From 1 to 10
+	case enQuestionLevel::Easy:// From 1 to 10
 		RandNum = rand() % (10 - 1 + 1) + 1;
 		return RandNum;
 	case enQuestionLevel::Med:// From 10 to 50
@@ -68,30 +70,35 @@ short GetRandomOperationType()
 	//Function to generate a random OperationType
 	//QuestionLevel : Easy = 1, Med = 2, Hard = 3, Mix = 4
 
-	int RandNum = RandNum = rand() % (5 - 1 + 1) + 1;
-	return RandNum;
+	int RandOp = rand() % (5 - 1 + 1) + 1;
+	return RandOp;
 
 }
 
-int GetTheQuestionAnswer(enOperationType OperationType)
+int GetTheQuestionAnswer(stGameResults& GameResults)
 {
 	//Add = 1, Sub = 2, Mul = 3, Div = 4, Mix = 5
-	stQuestionInfo QuestionInfo;
 
-	int Number1 = QuestionInfo.Number1;
-	int Number2 = QuestionInfo.Number2;
-
-		switch (OperationType)
-		{
-		case enOperationType::Add: // '+'
-			return Number1 + Number2;
-		case enOperationType::Sub: // '-'
-			return Number1 - Number2;
-		case enOperationType::Mul: // '*'
-			return Number1 * Number2;
-		case enOperationType::Div: // '/'
-			return Number1 / Number2;
-		}
+	switch (GameResults.OperationType)
+	{
+	case enOperationType::Add: // '+'
+		GameResults.QuestionInfo.Result = GameResults.QuestionInfo.Number1 + GameResults.QuestionInfo.Number2;
+		return GameResults.QuestionInfo.Result;
+		break;
+	case enOperationType::Sub: // '-'
+		GameResults.QuestionInfo.Result = GameResults.QuestionInfo.Number1 - GameResults.QuestionInfo.Number2;
+		return GameResults.QuestionInfo.Result;
+		break;
+	case enOperationType::Mul: // '*'
+		GameResults.QuestionInfo.Result = GameResults.QuestionInfo.Number1 * GameResults.QuestionInfo.Number2;
+		return GameResults.QuestionInfo.Result;
+		break;
+	case enOperationType::Div: // '/'
+		GameResults.QuestionInfo.Result = GameResults.QuestionInfo.Number1 / GameResults.QuestionInfo.Number2;
+		return GameResults.QuestionInfo.Result;
+		break;
+	}
+	
 }
 
 void SetWinnerScreenColor(enPassOrFail PassOrFail)
@@ -142,9 +149,9 @@ enPassOrFail PassOrFail(int NumberOfRightAnswers, int NumberOfWrongAnswers)
 {
 	if (NumberOfRightAnswers > NumberOfWrongAnswers)
 		return enPassOrFail::Pass;
-	else  
+	else
 		return enPassOrFail::Fail;
-	
+
 }
 
 string PassOrFailName(enPassOrFail PassOrFail)
@@ -185,13 +192,13 @@ enQuestionLevel ReadQuestionLevel()
 
 enOperationType ReadOperationType()
 {
-	short OperationType ;
+	short OperationType;
 	do
 	{
 		// Add = 1, Sub = 2, Mul = 3, Div = 4, Mix = 5
 		cout << "\nYour Choice: [1]:Add, [2]:Sub, [3]:Mul, [4]:Div, [5]:Mix ? ";
 		cin >> OperationType;
-		
+
 	} while (OperationType < 1 || OperationType>5);
 
 	if (OperationType == 5)
@@ -208,49 +215,50 @@ char GetOperationTypeSimbole(enOperationType OperationType)
 	return arrOperationType[OperationType - 1];
 }
 
-void PrintTheQuestion(stQuestionInfo QuestionInfo, char OperationTypeSimbole)
+void PrintTheQuestion(stQuestionInfo GameResults, char OperationTypeSimbol)
 {
-	cout << endl << QuestionInfo.Number1 << endl;
-	cout << QuestionInfo.Number2 << " " << OperationTypeSimbole << endl;
+	cout << endl << GameResults.Number1 << endl;
+	cout << GameResults.Number2 << " " << OperationTypeSimbol << endl;
 	cout << "\n-----------\n";
 }
 
 stGameResults PlayGame(int HowManyQuestions)
 {
-	int NumberOfRightAnswers = 0, NumberOfWrongAnswers = 0;
-	enQuestionLevel QuestionLevel = ReadQuestionLevel();
-	enOperationType OperationType = ReadOperationType();
+	stGameResults GameResults;
+
+	GameResults.NumberOfRightAnswers = 0, GameResults.NumberOfWrongAnswers = 0;
+	GameResults.QuestionLevel = ReadQuestionLevel();
+	GameResults.OperationType = ReadOperationType();
 
 	for (int QuestionsNumber = 1; QuestionsNumber <= HowManyQuestions; QuestionsNumber++)
 	{
-		stQuestionInfo QuestionInfo;
-
+		
 		cout << "\nQuestions [" << QuestionsNumber << "/" << HowManyQuestions << "]\n";
-		QuestionInfo.Number1 = GetRandomNumber(QuestionLevel);
-		QuestionInfo.Number2 = GetRandomNumber(QuestionLevel);
-		QuestionInfo.Result = GetTheQuestionAnswer(OperationType);
-	     
-		
+		GameResults.QuestionInfo.Number1 = GetRandomNumber(GameResults);
+		GameResults.QuestionInfo.Number2 = GetRandomNumber(GameResults);
+		GameResults.QuestionInfo.Result = GetTheQuestionAnswer(GameResults);
 
-		PrintTheQuestion(QuestionInfo, GetOperationTypeSimbole(OperationType));
 
-		QuestionInfo.PlayerAnswer = ReadThePlayerAnswer();
-		
-		PrintQuestionResults(QuestionInfo);
 
-		if (QuestionInfo.PlayerAnswer == QuestionInfo.Result)
-			NumberOfRightAnswers++;
+		PrintTheQuestion( GameResults.QuestionInfo, GetOperationTypeSimbole(GameResults.OperationType));
+
+		GameResults.QuestionInfo.PlayerAnswer = ReadThePlayerAnswer();
+
+		PrintQuestionResults(GameResults.QuestionInfo);
+
+		if (GameResults.QuestionInfo.PlayerAnswer == GameResults.QuestionInfo.Result)
+			GameResults.NumberOfRightAnswers++;
 		else
-			NumberOfWrongAnswers++;
+			GameResults.NumberOfWrongAnswers++;
 	}
 
-	return FillGameResults(HowManyQuestions, QuestionLevel, OperationType, NumberOfRightAnswers, NumberOfWrongAnswers);
+	return FillGameResults(HowManyQuestions, GameResults.QuestionLevel, GameResults.OperationType, GameResults.NumberOfRightAnswers, GameResults.NumberOfWrongAnswers);
 
 }
 
 void ShowFinalGameResult(stGameResults GameResults)
 {
-	
+
 	cout << "\n\n--------------------------------------------------\n";
 	cout << "Final Result is " << GameResults.ResultOfPassOrFail << endl;
 	cout << "--------------------------------------------------\n";
@@ -272,7 +280,7 @@ int ReadHowManyQuestions()
 	{
 		cout << "How Many Questions do you Want to answer ? \n";
 		cin >> NumberOfQuestions;
-		
+
 
 	} while (NumberOfQuestions < 1);
 
@@ -285,7 +293,7 @@ void ResetScreen()
 	system("cls");
 }
 
-void StartGame() 
+void StartGame()
 {
 	char PlayAgain = 'Y';
 
