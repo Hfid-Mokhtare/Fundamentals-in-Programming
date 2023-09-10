@@ -1,1 +1,10 @@
+there is three type of errors : 
+1 : syntax error  ==> when you forget a semicolon or a bracket ....
 
+2 : logical error ==> when the programe work but the resulte in the output are wrong
+
+3 : run time error ==> when the programe blocked for some reason
+
+What is debugging ?
+debugging is the ability to run the code line by line to trease the variables and 
+values and functions that you have in the programe
