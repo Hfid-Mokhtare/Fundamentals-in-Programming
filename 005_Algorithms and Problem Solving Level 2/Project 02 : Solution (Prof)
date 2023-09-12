@@ -196,7 +196,7 @@ void PrintTheQuestion(stQuizz& Quizz, short QuestionNumber)
 	cout << "Question [" << QuestionNumber + 1 << "/" << Quizz.NumberOfQuestions << "]\n\n";
 	cout << Quizz.QuestionList[QuestionNumber].Number1 << endl;
 	cout << Quizz.QuestionList[QuestionNumber].Number2 << " ";
-	cout << GetOperationTypeSimbole(Quizz.QuestionList[QuestionNumber].OperationType);
+	cout << GetOperationTypeText(Quizz.QuestionList[QuestionNumber].OperationType);
 	cout << "\n___________" << endl;
 }
 
