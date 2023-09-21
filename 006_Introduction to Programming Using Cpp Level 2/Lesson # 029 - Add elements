@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+
+	vector <int> vNumber;
+
+	for (int i = 10; i <= 100; i += 10)
+	{
+		vNumber.push_back(i);
+	}
+
+	for (int& Number : vNumber)
+	{
+		cout << Number<< endl;
+	}
+	
+
+	return 0;
+}
