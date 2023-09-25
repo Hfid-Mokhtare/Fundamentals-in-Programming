@@ -1,0 +1,13 @@
+they are fore parte in your memory (RAM)
+1 : Source Code / instructions
+
+2 : Static / Global variables
+
+3 : Stack : local variable / functions / pointers
+    the operating system give you a size in the memory fore your proggrame
+    and you don't have permition to use the ather memory juste if you use pointers
+    to have accesse to the Heap memory
+
+4 : Heap : any dynamic variables / objects / arrays...etc
+    non limited memory to use when you need it and if your static memory is 
+    not enothe and you shoud use pointer to get access to it .
