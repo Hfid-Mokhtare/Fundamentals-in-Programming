@@ -9,7 +9,7 @@ int main()
 
 
 	fstream MyFile;
-	MyFile.open("my file.txt"), ios::out | ios::app);//Writ Mode
+	MyFile.open("my file.txt"), ios::out | ios::app);//append Mode
 	
 
 	if (MyFile.is_open())
