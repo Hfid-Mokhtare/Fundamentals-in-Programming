@@ -64,9 +64,9 @@ void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short Cols)
 
 void PrintMatrix(int arr[3][3], short Rows, short Cols)
 {
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < Rows; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < Cols; j++)
 		{
 			cout << setw(3) << arr[i][j] << "    ";
 		}
