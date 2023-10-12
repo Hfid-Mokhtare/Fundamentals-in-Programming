@@ -1,1 +1,78 @@
+//Me and Prof : 
+#include <iostream>
+#include<iomanip>
+#include <string>
 
+using namespace std;
+
+
+void PrintMatrix(int arr[3][3], short Rows, short Cols)
+{
+	for (int i = 0; i < Rows; i++)
+	{
+		for (int j = 0; j < Cols; j++)
+		{
+			cout << setw(3) << arr[i][j] << "   ";
+		}
+		cout << "\n";
+	}
+}
+
+bool IsNumberInMatrix(int Matrix1[3][3], short Rows, short Cols, int NumToCheck)
+{
+	short Counter = 0;
+
+	for (int i = 0; i < Rows; i++)
+	{
+		for (int j = 0; j < Cols; j++)
+		{
+			if (Matrix1[i][j] == NumToCheck)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+
+}
+
+void PrintIntersecterNumbers(int Matrix1[3][3], int Matrix2[3][3], short Rows, short Cols)
+{
+
+	int NumToCheck;
+
+	for (int i = 0; i < Rows; i++)
+	{
+		for (int j = 0; j < Cols; j++)
+		{
+			NumToCheck = Matrix1[i][j];
+
+			if (IsNumberInMatrix(Matrix2, 3, 3, NumToCheck) == true)
+			{
+				cout << setw(3) << NumToCheck << "\t";
+			}
+
+		}
+	}
+
+}
+
+
+int main()
+{
+	int Matrix1[3][3] = { {10,20,30},{11,12,13},{22,33,44} };
+	int Matrix2[3][3] = { {10,21,34},{11,16,14},{211,33,45} };
+	
+
+	cout << "Matrix 1 : \n";
+	PrintMatrix(Matrix1, 3, 3);
+
+	cout << "Matrix 2 : \n";
+	PrintMatrix(Matrix2, 3, 3);
+
+	cout << "\nIntersecter Numbers are : \n";
+	PrintIntersecterNumbers(Matrix1, Matrix2, 3, 3);
+
+	system("pause>0");
+}
