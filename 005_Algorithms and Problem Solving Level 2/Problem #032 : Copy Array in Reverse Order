@@ -45,14 +45,6 @@ void PrintArray(int Arr[100], int arrLength)
 	cout << endl;
 }
 
-void Swap_Numbers(int& Num1, int& Num2)
-{
-	int Temp = 0;
-
-	Temp = Num1;
-	Num1 = Num2;
-	Num2 = Temp;
-}
 void CopyArrayInRverseOrder(int ArrSource[100], int ArrDestination[100], int arrLength)
 {
 	for (int i = 0; i < arrLength; i++)
