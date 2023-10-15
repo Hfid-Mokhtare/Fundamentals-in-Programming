@@ -48,7 +48,7 @@ void PrintIntersecterNumbers(int Matrix1[3][3], int Matrix2[3][3], short Rows, s
 		{
 			NumToCheck = Matrix1[i][j];
 
-			if (IsNumberInMatrix(Matrix2, 3, 3, NumToCheck) == true)
+			if (IsNumberInMatrix(Matrix2, 3, 3, NumToCheck))
 			{
 				cout << setw(3) << NumToCheck << "\t";
 			}
