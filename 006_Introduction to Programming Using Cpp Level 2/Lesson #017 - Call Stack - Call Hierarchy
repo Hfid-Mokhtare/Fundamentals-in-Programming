@@ -19,6 +19,7 @@ void Function1()
 {
 	Function2();
 }
+
 int main()
 {
 	
