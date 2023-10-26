@@ -12,7 +12,7 @@ char ReadCharacter()
 	return Char1;
 }
 
-bool IsVawel(char Char1)
+bool IsVowel(char Char1)
 { 
 
 	Char1 = tolower(Char1);
@@ -47,7 +47,7 @@ int main()
 {
 	char Char1 = ReadCharacter();
 
-	if(IsVawel(Char1))
+	if(IsVowel(Char1))
 		cout << "\nYes Letter \'" << Char1 << "\' is a vowel\n";
 	else
 		cout << "\nNo Letter \'" << Char1 << "\' is Not a vowel\n";
@@ -71,7 +71,7 @@ char ReadCharacter()
 	return Char1;
 }
 
-bool IsVawel(char Char1)
+bool IsVowel(char Char1)
 { 
 
 	Char1 = tolower(Char1);
@@ -84,7 +84,7 @@ int main()
 {
 	char Char1 = ReadCharacter();
 
-	if(IsVawel(Char1))
+	if(IsVowel(Char1))
 		cout << "\nYes Letter \'" << Char1 << "\' is a vowel\n";
 	else
 		cout << "\nNo Letter \'" << Char1 << "\' is Not a vowel\n";
