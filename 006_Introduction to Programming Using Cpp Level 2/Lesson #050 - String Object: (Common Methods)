@@ -22,6 +22,10 @@ int main()
 	S1.insert(0, "Hello ! ");
 	cout << S1 << endl;
 
+	// to delet a word use function < erase() >
+	//S1.erase(<position to starte from>, < length to delete >);
+	
+
 	//Print all the next 13 letters from position 10
 	cout << S1.substr(19, 12)<<endl;
 	
