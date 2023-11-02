@@ -12,7 +12,7 @@ string RemovePunctuationsFromString(string S1)
 
 	for (int i = 0; i < S1.length(); i++)
 	{
-		if (ispunct(S1[i]))
+		if (!ispunct(S1[i]))
 		{
 			S2 += S1[i];
 		}
