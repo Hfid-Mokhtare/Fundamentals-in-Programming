@@ -1,1 +1,71 @@
+// Me : 
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string Lower_First_Letter_Of_Each_Word(string S1)
+{
+
+
+	bool isfirstletter = true;
+
+	for (short i = 0; i < S1.length(); i++)
+	{
+		if (S1[i] != ' ' && isfirstletter)
+		{
+			S1[i] = tolower(S1[i]);
+		}
+
+		isfirstletter = (S1[i] == ' ' ? true : false);
+	}
+
+	return S1;
+}
+
+
+string ReplaceWordInStringUsingCustomFunction(string S1, string StringToReplace, string sRepalceTo, bool MatchCase = true)
+{
+
+	if (MatchCase == false)
+	{
+		S1 = Lower_First_Letter_Of_Each_Word(S1);
+		StringToReplace = Lower_First_Letter_Of_Each_Word(StringToReplace);
+	}
+
+	short Pos = S1.find(StringToReplace);
+
+	while (Pos != std::string::npos)
+	{
+		S1 = S1.erase(Pos, StringToReplace.length());
+		S1.insert(Pos, sRepalceTo);
+		Pos = S1.find(StringToReplace);//find next
+
+	}
+
+	return S1;
+}
+
+int main()
+{
+	string S1 = "Welcome to Jordan , Jordan is a nice country";
+	string StringToReplace = "jordan";
+	string ReplaceTo = "USA";
+
+	cout << "\nOriginal String : \n" << S1;
+	cout << "\n\nReplace With match case : \n";
+	cout << ReplaceWordInStringUsingCustomFunction(S1,
+		StringToReplace, ReplaceTo);
+	cout << "\n\nReplace With dont match case : \n";
+    cout << ReplaceWordInStringUsingCustomFunction(S1,
+		StringToReplace, ReplaceTo, false);
+
+
+	system("pause>0");
+}
+
+=================================================================
+
+//Prof : 
 
