@@ -51,6 +51,12 @@ int main()
 	S1.clear();
 	cout << S1 << endl;
 
+	//get the end of string 
+	cout << S1.end();
+
+	//get the begining of string 
+	cout << S1.begin();
+
 
 	
 	
