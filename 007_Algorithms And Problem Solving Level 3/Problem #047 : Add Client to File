@@ -1,1 +1,83 @@
+// Me : 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
 
+using namespace std;
+
+struct sClient
+{
+	string AccountNumber;
+	string PinCode;
+	string Name;
+	string Phone;
+	double AccountBalance;
+};
+
+sClient ReadNewClient()
+{
+	sClient Client;
+
+	cout << "Enter Account Number ?";
+	getline(cin, Client.AccountNumber);
+
+	cout << "Enter PinCode ?";
+	getline(cin, Client.PinCode);
+
+	cout << "Enter Name ?";
+	getline(cin, Client.Name);
+
+	cout << "Enter Phone ?";
+	getline(cin, Client.Phone);
+
+	cout << "Enter Account Balance ?";
+	cin >> Client.AccountBalance;
+
+	return Client;
+}
+
+string ConvertRecordToLine(sClient Client, string Seperator = "#//#")
+{
+	string stClientRecord = "";
+	stClientRecord += Client.AccountNumber + Seperator;
+	stClientRecord += Client.PinCode + Seperator;
+	stClientRecord += Client.Name + Seperator;
+	stClientRecord += Client.Phone + Seperator;
+	stClientRecord += to_string(Client.AccountBalance);
+
+	return stClientRecord;
+
+}
+
+int main()
+{
+	sClient Client;
+	char AddMore;
+	fstream MyFile;
+
+	
+	do
+	{
+
+	
+		cout << "\nAdding New client : \n\n";
+		Client = ReadNewClient();
+
+		MyFile.open("Client Data.txt", ios::out | ios::app);
+		if (MyFile.is_open())
+		{
+			MyFile << ConvertRecordToLine(Client) << endl;
+
+			MyFile.close();
+		}
+
+		cout << "\nClient Added Successfully,do you want to add more clients ?(Y/N)";
+		cin>> AddMore;
+		cin.ignore(1, '\n');
+
+	} while (AddMore == 'y' || AddMore == 'Y');
+
+
+	return 0;
+}
