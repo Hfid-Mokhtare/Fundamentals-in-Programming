@@ -13,7 +13,7 @@ int main()
 
 	float A = 7.0, B = 9.0;
 	
-	printf("\nThe float division is : %.3f / %.3f = %.3f \n", A, B, A + B);
+	printf("\nThe float division is : %.3f / %.3f = %.3f \n", A, B, A / B);
 
 	double d = 12.45;
 	printf("\nThe double value is %.3f \n", d);
