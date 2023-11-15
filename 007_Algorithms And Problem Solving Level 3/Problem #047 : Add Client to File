@@ -40,7 +40,7 @@ sClient ReadNewClient()
 string ConvertRecordToLine(sClient Client, string Seperator = "#//#")
 {
 	string stClientRecord = "";
-	stClientRecord += Client.AccountNumber + Seperator;
+	stClientRecord += Client.AccountNumber + Separator;
 	stClientRecord += Client.PinCode + Seperator;
 	stClientRecord += Client.Name + Seperator;
 	stClientRecord += Client.Phone + Seperator;
