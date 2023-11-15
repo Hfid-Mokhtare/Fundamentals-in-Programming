@@ -213,19 +213,21 @@ void PrintClientsRecord(sClient Client)
 	cout << "|" << left << setw(30) << Client.Name;
 	cout << "|" << left << setw(15) << Client.Phone;
 	cout << "|" << left << setw(20) << Client.AccountBalance;
+	cout << "|";
 }
 
 void PrintAllClientsData(vector <sClient> vClients)
 {
 
 	cout << "\t\t\t\t\tClient List (" << vClients.size() << ") Client(s)\n" << endl;
-	cout << "-------------------------------------------------------------------------------------------------------\n";
+	cout << "+--------------------+---------------+------------------------------+---------------+--------------------+\n";
 	cout << "|" << left << setw(20) << "Account Number";
 	cout << "|" << left << setw(15) << "PinCode";
 	cout << "|" << left << setw(30) << "Client Name";
 	cout << "|" << setw(15) << left << "Phone";
-	cout << "|" << left << setw(20) << "Account Balance" << endl;
-	cout << "-------------------------------------------------------------------------------------------------------\n";
+	cout << "|" << left << setw(20) << "Account Balance";
+	cout << "|" << endl;
+	cout << "+--------------------+---------------+------------------------------+---------------+--------------------+\n";
 
 	for (sClient Client : vClients)
 	{
@@ -233,7 +235,7 @@ void PrintAllClientsData(vector <sClient> vClients)
 		cout << endl;
 	}
 
-	cout << "-------------------------------------------------------------------------------------------------------\n";
+	cout << "+--------------------+---------------+------------------------------+---------------+--------------------+\n";
 
 }
 
