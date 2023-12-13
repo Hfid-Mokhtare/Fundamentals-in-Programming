@@ -16,6 +16,11 @@ int main()
 	cout << " Please enter Employee Number : \n";
 	cin >> Number;
 
+	/*if you need to  read a lot of input usin <getline(cin , varible)> function
+	soo it beter to use <getline(cin >> ws, varible)> this help to remove all white spases
+	and you do not need to using ignore() function enay more */
+	
+	
 	cout << "Please enter Name : \n";
 	getline(cin, Name);
 
