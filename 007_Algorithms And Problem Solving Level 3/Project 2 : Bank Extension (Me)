@@ -465,7 +465,7 @@ bool Withdraw(string AccountNumber, vector <sClient>& vClients)
 	{
 		PrintClientCard(Client);
 
-		cout << "\n\nPlease enter deposit amount ? ";
+		cout << "\n\nPlease enter Withdraw amount ? ";
 		cin >> WithdrawAmount;
 
 		while (WithdrawAmount >= Client.AccountBalance)
