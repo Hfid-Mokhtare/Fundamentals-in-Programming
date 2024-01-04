@@ -1,4 +1,4 @@
-// Me : 
+// Me This Programme is worke only for number from 1 to 999 : 
 #include <iostream>
 #include <string>
 
@@ -73,7 +73,7 @@ int GetThreeDigits(int Number)
 {
 	Number = ReverseNumber(Number);
 	string stNumber = to_string(Number);
-	string HNumber = stNumber.substr(0, 3);
+	string HNumber = stNumber.substr(3, stNumber.length());
 
 	return ReverseNumber(stoi(HNumber));
 }
@@ -107,69 +107,155 @@ string TransacteTensNumbersSection(int Number)
 		return GetNodalNumbers(Number);
 }
 
-string TransacteHundredsNumbersSection(int Number, string Sufixe,string stNumber)
+string TransacteHundredsNumbersSection(int Number, string Sufixe)
 {
-	if ((Number % 100) != 0)
-	{
-		stNumber = TransacteUnitsNumbersSection(Number / 100) + Sufixe;
-		Number = (Number % 100) * 1;
-	}
-	else
+	string stNumber = "";
+
 		stNumber = TransacteUnitsNumbersSection(Number / 100) + Sufixe;
 
 	return stNumber;
 }
 
 
-string NumbersTransaction(int Number, int DigitsInNumber)
+void NumbersTransaction(int Number, int DigitsInNumber, string & stNumber)
 {
-	static string stNumber = " ";
-
-	if (DigitsInNumber <= 1)
+	if (DigitsInNumber <= 0)
+	{
+		stNumber += " ";
+	}
+	else if (DigitsInNumber <= 1)
 	{
 		stNumber += TransacteUnitsNumbersSection(Number);
 	}
 	else if (DigitsInNumber <= 2)
 	{
-		stNumber += TransacteTensNumbersSection(Number);
+		stNumber += TransacteTensNumbersSection(Number); 
 	}
 	else if (DigitsInNumber <= 3)
 	{
-		stNumber += TransacteHundredsNumbersSection(Number, " Hundred ", stNumber);
-		NumbersTransaction(Number, CounteDigitsInNumber(Number));
+		stNumber += TransacteHundredsNumbersSection(Number, " Hundred ");
+		Number = (Number % 100) * 1;
+		NumbersTransaction(Number, CounteDigitsInNumber(Number)*1, stNumber);
+
 	}
 	else if (DigitsInNumber <= 6)
 	{
-		//TransacTethousandsSection(Number);
-		//NumbersTransaction(stNumber);
-
+		
+		stNumber += TransacteHundredsNumbersSection(GetThreeDigits(Number), " Thousand ");
+		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
 	}
 	else if (DigitsInNumber <= 9)
 	{
-		//TransacteMillionsSection(Number);
-		//NumbersTransaction(stNumber);
-
+		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
 	}
 	else if (DigitsInNumber <= 12)
 	{
-		//TransacteBillionsSection(Number);
-		//NubersTransaction(stNumber);
+		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
 
 	}
 	else
 	{
 		cout << "The Number is too bigue!!";
 	}
-	return stNumber;
 	
 }
 
 int main()
 {
+	string stNumber = "";
+
 	static int Number = ReadNumber("Enter a Number ? ");
 	int DigitsInNumber = CounteDigitsInNumber(Number * 1);
-	cout << NumbersTransaction(Number * 1, DigitsInNumber);
 
+	NumbersTransaction((Number * 1), DigitsInNumber, stNumber);
+
+	cout << endl << stNumber;
+
+	system("pause>0");
+	return 0;
+}
+
+=============================================================================
+
+// Prof : 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadNumber(string Message)
+{
+	int Number = 0;
+	cout << Message;
+	cin >> Number;
+	return Number;
+}
+
+string NumberToTexte(int Number)
+{
+	if (Number <= 0)
+	{
+		return " ";
+
+	}
+	if (Number >= 1 && Number <= 19)
+	{
+		string arr[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+				"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+		return arr[Number];
+	}
+	if (Number >= 20 && Number <= 99)
+	{
+		 string arr[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+		 return arr[Number / 10] + " " + NumberToTexte(Number % 10);
+	}
+	if (Number >= 100 && Number <= 199)
+	{
+		return "One Hundred " + NumberToTexte(Number % 100);
+
+	}
+	if (Number >= 200 && Number <= 999)
+	{
+		return NumberToTexte(Number / 100) + " Hundreds " + NumberToTexte(Number % 100);
+
+	}
+	if (Number >= 1000 && Number <= 1999)
+	{
+		return "One Thousand " + NumberToTexte(Number % 1000);
+
+	}
+	if (Number >= 2000 && Number <= 999999)
+	{
+		return NumberToTexte(Number / 1000) + " Thousands " + NumberToTexte(Number % 1000);
+
+	}
+	if (Number >= 1000000 && Number <= 1999999)
+	{
+		return "One Million  " + NumberToTexte(Number % 1000000);
+
+	}
+	if (Number >= 2000000 && Number <= 999999999)
+	{
+		return NumberToTexte(Number / 1000000) + " Millions " + NumberToTexte(Number % 1000000);
+
+	}
+	if (Number >= 1000000000 && Number <= 1999999999)
+	{
+		return "One Billion  " + NumberToTexte(Number % 1000000000);
+
+	}
+	else
+	{
+		return NumberToTexte(Number / 1000000000) + " Billions " + NumberToTexte(Number % 1000000000);
+
+	}
+	
+}
+
+int main()
+{
+	int Number = ReadNumber("Enter a Number ? ");
+	cout << NumberToTexte(Number);
 
 	system("pause>0");
 	return 0;
