@@ -1,18 +1,19 @@
 // Prof : 
+// Prof : 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-int ReadNumber(string Message)
+long long ReadNumber(string Message)
 {
-	int Number = 0;
+	long long Number = 0;
 	cout << Message;
 	cin >> Number;
 	return Number;
 }
 
-string NumberToTexte(int Number)
+string NumberToTexte(long long Number)
 {
 	if (Number <= 0)
 	{
@@ -21,14 +22,14 @@ string NumberToTexte(int Number)
 	}
 	if (Number >= 1 && Number <= 19)
 	{
-		string arr[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+		string arr[] = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
 				"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
 		return arr[Number];
 	}
 	if (Number >= 20 && Number <= 99)
 	{
-		 string arr[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
-		 return arr[Number / 10] + " " + NumberToTexte(Number % 10);
+		string arr[] = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+		return arr[Number / 10] + " " + NumberToTexte(Number % 10);
 	}
 	if (Number >= 100 && Number <= 199)
 	{
@@ -70,12 +71,12 @@ string NumberToTexte(int Number)
 		return NumberToTexte(Number / 1000000000) + " Billions " + NumberToTexte(Number % 1000000000);
 
 	}
-	
+
 }
 
 int main()
 {
-	int Number = ReadNumber("Enter a Number ? ");
+	long long Number = ReadNumber("Enter a Number ? ");
 	cout << NumberToTexte(Number);
 
 	system("pause>0");
