@@ -1,0 +1,53 @@
+#include<iostream>
+#include<string>
+
+using namespace std; 
+
+/* All years which are perfectly divisibe by 4 are leap years(366 day)
+except for century years (years ending with 00),which are leap years
+only if they are perfectly devisible by 400 */
+
+int ReadYear()
+{ 
+	int Year;  
+	cout << "\nPlease enter a Year to check? ";    
+	cin >> Year;
+	return Year;
+} 
+
+bool IsLeapYear(int Year)
+{
+	// leap year if perfectly divisible by 400
+	if (Year % 400 == 0) {
+		return true;
+	}
+	// not a leap year if divisible by 100
+	// but not divisible by 400
+	else if (Year % 100 == 0) {
+		return false;
+	}
+	// leap year if not divisible by 100
+	// but divisible by 4
+	else if (Year % 4 == 0) {
+		return true;
+	}
+	// all other years are not leap years
+	else {
+		return false;
+	}
+
+}
+
+int main()
+{
+	int Year = ReadYear();   
+
+	if (IsLeapYear(Year))
+		cout << "\nYes, Year [" << Year << "] is a leap Year";
+	else
+		cout << "\nNo, Year [" << Year << "] is a leap Year";
+
+	system("pause>0");
+	return 0;
+
+}
