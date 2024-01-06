@@ -1,1 +1,37 @@
 
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int ReadYear()
+{
+	int Year;
+	cout << "\nPlease enter a Year to check? ";
+	cin >> Year;
+	return Year;
+}
+
+bool IsLeapYear(int Year)
+{
+	/* All years which are perfectly divisibe by 4 are leap years(366 day)
+	except for century years (years ending with 00),which are leap years
+	only if they are perfectly devisible by 400 */
+
+	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+	
+}
+
+int main()
+{
+	int Year = ReadYear();
+
+	if (IsLeapYear(Year))
+		cout << "\nYes, Year [" << Year << "] is a leap Year";
+	else
+		cout << "\nNo, Year [" << Year << "] is a leap Year";
+
+	system("pause>0");
+	return 0;
+
+}
