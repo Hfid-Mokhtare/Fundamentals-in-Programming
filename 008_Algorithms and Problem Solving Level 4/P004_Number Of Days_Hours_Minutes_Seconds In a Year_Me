@@ -1,0 +1,67 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+struct stYearInfo 
+{
+	int Days;
+	int Hours;
+	int minutes;
+	long Seconds;
+
+};
+
+int ReadYear()
+{
+	int Year;
+	cout << "\nPlease enter a Year to check? ";
+	cin >> Year;
+	return Year;
+}
+
+bool IsLeapYear(int Year)
+{
+	/* All years which are perfectly divisibe by 4 are leap years(366 day)
+	except for century years (years ending with 00),which are leap years
+	only if they are perfectly devisible by 400 */
+
+	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+	
+}
+
+stYearInfo GetYearInfo(int Days)
+{
+	stYearInfo YearInfo;
+	YearInfo.Days = Days;
+	YearInfo.Hours = Days * 24;
+	YearInfo.minutes = YearInfo.Hours * 60;
+	YearInfo.Seconds = YearInfo.minutes * 60;
+
+	return YearInfo;
+}
+
+void PrintYearInfo(int Year,int Days)
+{
+	stYearInfo YearInfo = GetYearInfo(Days);
+
+	cout << "\nNumber of Days    in Year [" << Year << "] is " << YearInfo.Days;
+	cout << "\nNumber of Hours   in Year [" << Year << "] is " << YearInfo.Hours;
+	cout << "\nNumber of Minuts  in Year [" << Year << "] is " << YearInfo.minutes;
+	cout << "\nNumber of Seconds in Year [" << Year << "] is " << YearInfo.Seconds;
+}				 
+
+void YearInfo(int Year)
+{
+
+	(IsLeapYear(Year)) ? PrintYearInfo(Year, 366) : PrintYearInfo(Year, 365);
+}
+
+int main()
+{
+	int Year = ReadYear();
+	YearInfo(Year);
+
+	system("pause>0");
+	return 0;
+}
