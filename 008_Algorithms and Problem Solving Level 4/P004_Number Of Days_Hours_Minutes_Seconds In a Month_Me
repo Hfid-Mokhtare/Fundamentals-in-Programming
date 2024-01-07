@@ -1,0 +1,59 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+
+int ReadNumber(string Messag)
+{
+	int Number;
+	cout << Messag;
+	cin >> Number;
+	return Number;
+}
+
+bool isLeapYear(int Year)
+{
+	/* All years which are perfectly divisibe by 4 are leap years(366 day)
+	except for century years (years ending with 00),which are leap years
+	only if they are perfectly devisible by 400 */
+
+	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+	
+}
+
+short NumberOfDaysInAMonth(short Month, int Year)
+{
+	int arr[] = { 0, 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30,31 };
+	return  (isLeapYear(Year) && Month == 2) ? 29 : (Month == 2) ? 28 : arr[Month];
+} 
+
+int NumberOfHoursInAMonth(short Month, int Year)
+{ 
+	return  NumberOfDaysInAMonth(Month, Year) * 24;
+} 
+
+int NumberOfMinutesInAMonth(short Month, int Year)
+{
+	return  NumberOfHoursInAMonth(Month, Year) * 60;
+} 
+
+int NumberOfSecondsInAMonth(short Month, int Year)
+{ 
+	return  NumberOfMinutesInAMonth(Month, Year) * 60;
+}
+
+int main()
+{
+	int Year = ReadNumber("\nPlease enter a Year to check ? ");
+	short Month = ReadNumber("\nPlease enter a Month to check ? ");
+
+	cout << "\nNumber of Days    in Month [" << Month << "] is " << NumberOfDaysInAMonth(Month, Year);
+	cout << "\nNumber of Hours   in Month [" << Month << "] is " << NumberOfHoursInAMonth(Month, Year);
+	cout << "\nNumber of Minuts  in Month [" << Month << "] is " << NumberOfMinutesInAMonth(Month, Year);
+	cout << "\nNumber of Seconds in Month [" << Month << "] is " << NumberOfSecondsInAMonth(Month, Year);
+
+
+	system("pause>0");
+	return 0;
+}
