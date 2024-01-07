@@ -24,6 +24,8 @@ bool isLeapYear(int Year)
 
 short NumberOfDaysInAMonth(short Month, int Year)
 {
+	if (Month < 1 || Month>12) 
+		return  0; 
 	int arr[] = { 0, 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30,31 };
 	return  (isLeapYear(Year) && Month == 2) ? 29 : (Month == 2) ? 28 : arr[Month];
 } 
