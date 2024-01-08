@@ -1,0 +1,145 @@
+
+#include<iostream>
+#include<string>
+#include <iomanip>
+
+using namespace std;
+
+short ReadYear() 
+{ 
+	short Year;  
+	cout << "\nPlease enter a year ? ";    
+	cin >> Year; 
+	return Year; 
+}
+short ReadMonth() 
+{ 
+	short Month; 
+	cout << "\nPlease enter a Month? ";  
+	cin >> Month;
+	return Month;
+} 
+
+
+////////////////////////HEADER////////////////////////
+string MonthShortName(short MonthOrder)
+{
+	string arrMonths[] = {
+		"","Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+
+	return arrMonths[MonthOrder];
+}   
+void InderScoreGeniratore(int NuberOfScors)
+{
+	
+	for (short i = 1; i <= NuberOfScors; i++){
+		cout << "_";
+	}
+}
+void PrintCalenderHader(int Month)
+{
+	cout << endl;
+	InderScoreGeniratore(15);
+	cout << MonthShortName(Month) ;
+	InderScoreGeniratore(15);
+	cout << endl;
+}		
+//////////////////////////////////////////////////////
+
+
+////////////////////////BUDY/////////////////////////
+bool IsLeapYear(int Year)
+{
+	/* All years which are perfectly divisibe by 4 are leap years(366 day)
+	except for century years (years ending with 00),which are leap years
+	only if they are perfectly devisible by 400 */
+
+	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+}
+short DayOfWeekOrder(int Year, short Month, short Day)
+{
+	//For the Gregorian Calendar
+
+	short A, M, Y;
+	A = (14 - Month) / 12;
+	M = Month + 12 * A - 2;
+	Y = Year - A;
+
+	// 0:Sun, 1:Mon, 2:Tue,...etc
+	return (Day + Y + (Y / 4) - (Y / 100) + (Y / 400) + (31 * M / 12)) % 7;
+}
+short NumberOfDaysInAMonth(int Year, short Month)
+{
+	if (Month < 1 || Month>12)
+		return  0;
+
+	int NumberOfDays[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	return (Month == 2) ? (IsLeapYear(Year) ? 29 : 28) : NumberOfDays[Month - 1];
+}
+void PrintCalenderDaysName()
+{
+	string shortDays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
+	// Print all short day names
+	cout << endl;
+	for (string& day : shortDays) {
+		cout << day << "  ";
+	}
+	cout << endl;
+}
+void PrintCalenderDaysNumber(int Year, short Month)
+{
+	short DayNumber = 1;
+	short DaysInAMonth = NumberOfDaysInAMonth(Year, Month);
+	short DayOrder = DayOfWeekOrder(Year, Month, 1);
+	short Counter = DayOrder;
+
+
+	for (short i = 1; i <= DaysInAMonth; i++)
+	{
+		if (Counter == 7)
+		{
+			cout << endl;
+			Counter = 0;
+		}
+		if (i == 1)
+		{
+			cout << right << setw(5 * DayOrder + 3) << i<<"  ";
+		}
+		else
+		{
+			cout << setw(3) << i << "  ";
+		}
+
+		Counter++;
+	}
+}
+void PrintCalenderBudy(int Year, short Month)
+{
+	PrintCalenderDaysName();
+	PrintCalenderDaysNumber(Year, Month);
+}
+/////////////////////////////////////////////////////
+
+
+void PrintMonthCalender(int Year, short Month)
+{
+	PrintCalenderHader(Month);
+	
+	PrintCalenderBudy(Year, Month);
+	
+	cout << "\n";
+	InderScoreGeniratore(33);
+}
+
+int main()
+{
+	int Year = ReadYear();
+	short Month = ReadMonth();
+	
+	PrintMonthCalender(Year, Month);
+
+	system("pause>0");
+	return 0;
+}
