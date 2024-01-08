@@ -61,7 +61,7 @@ void PrintMonthCalendar(short Year, short Month)
 	int NumberOfDays; 
 
 	// Index of the day from 0 to 6
-	int current = DayOfWeekOrder(1, Year, Month);
+	int current = DayOfWeekOrder(Year, Month, 1);
 
 	NumberOfDays = NumberOfDaysInAMonth(Year, Month);
 
