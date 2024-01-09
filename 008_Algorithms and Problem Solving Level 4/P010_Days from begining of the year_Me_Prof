@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+
+short ReadYear()
+{
+	short Year;
+	cout << "\nPlease enter a year ? ";
+	cin >> Year;
+	return Year;
+}
+
+short ReadMonth()
+{
+	short Month;
+	cout << "\nPlease enter a Month? ";
+	cin >> Month;
+	return Month;
+}
+
+short ReadDay()
+{
+	short Year;
+	cout << "\nPlease enter a Day? ";
+	cin >> Year;
+	return Year;
+}
+
+bool IsLeapYear(int Year)
+{
+	/* All years which are perfectly divisibe by 4 are leap years(366 day)
+	except for century years (years ending with 00),which are leap years
+	only if they are perfectly devisible by 400 */
+
+	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+}
+
+short NumberOfDaysInAMonth(int Year, short Month)
+{
+	if (Month < 1 || Month>12)
+		return  0;
+
+	short NumberOfDays[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	return (Month == 2) ? (IsLeapYear(Year) ? 29 : 28) : NumberOfDays[Month - 1];
+}
+
+short NumberOfDaysFromBeginingOfTheYear(int Year, short Month, short Day)
+{
+	short TotalDays = 0;
+
+	for (int i = 1; i <= Month - 1; i++)
+	{
+		TotalDays += NumberOfDaysInAMonth(Year, i);
+	}
+
+	TotalDays += Day;
+
+	return TotalDays;
+}
+
+int main()
+{
+	short Day = ReadDay();
+	short Month = ReadMonth();
+	int Year = ReadYear();
+
+	cout << "\nNumber of Days from begining of the year is : "
+		<< NumberOfDaysFromBeginingOfTheYear(Year, Month, Day);
+
+
+	system("pause>0");
+	return 0;
+}
