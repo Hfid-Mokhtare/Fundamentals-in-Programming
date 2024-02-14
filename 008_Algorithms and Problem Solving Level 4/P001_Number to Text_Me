@@ -1,177 +1,84 @@
-// Me This Programme is worke only for number from 1 to 999 : 
-
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// Units, tens, hundreds
-// Hundreds Section
-// Tens, hundreds, thousands, millions, billions. 
-
-enum enUnitsNumbers { One = 1, };
-
-
-
-string GetNumbersFrom_1_To_9(int Number)
+long long ReadNumber()
 {
-	string arrNumber[9] = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-	return arrNumber[Number - 1];
-}
-
-string GetNumbersFrom_11_To_19(int Number)
-{
-	string arrNumber[9] = { "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-	return arrNumber[Number - 10 - 1];
-}
-
-string GetNodalNumbers(int Number)
-{
-	string arrNumber[9] = { "ten","twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
-	return arrNumber[(Number/10) - 1];
-}
-
-
-
-int CounteDigitsInNumber(int Number)
-{
-	int Counter = 0;
-
-	while (Number > 0)
-	{
-		Number /= 10;
-		Counter++;
-	}
-	return Counter;
-}
-
-int ReadNumber(string Message)
-{
-	int Number = 0;
-
-	cout << Message;
+	long long Number;
+	cout << "Enter a Number : ";
 	cin >> Number;
-
 	return Number;
 }
 
-int ReverseNumber(int Number)
+string NumberToText_1_or_2_Digits(short Number)
 {
-	int Remainder = 0, Number2 = 0;
+    string NumToText = "";
+    string StNumArray[] = {
+    "Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+    "Nine","Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+    "Sixteen","Seventeen", "Eighteen", "Nineteen",
+    "Twenty", "Twenty One", "Twenty Two",  "twenty three", "twenty four",
+    "twenty five", "twenty six", "twenty seven",
+    "twenty eight", "twenty nine", "thirty", "thirty one", "thirty two",
+    "thirty three", "thirty four", "thirty five", "thirty six", "thirty seven",
+    "thirty eight", "thirty nine", "forty", "forty one", "forty two",
+    "forty three", "forty four", "forty five", "forty six", "forty seven",
+    "forty eight", "forty nine", "fifty", "fifty one", "fifty two",
+    "fifty three", "fifty four", "fifty five", "fifty six", "fifty seven",
+    "fifty eight", "fifty nine", "sixty", "sixty one", "sixty two",
+    "sixty three", "sixty four", "sixty five", "sixty six", "sixty seven",
+    "sixty eight", "sixty nine", "seventy", "seventy one", "seventy two",
+    "seventy three", "seventy four", "seventy five", "seventy six", "seventy seven",
+    "seventy eight", "seventy nine", "eighty", "eighty one", "eighty two",
+    "eighty three", "eighty four", "eighty five", "eighty six", "eighty seven",
+    "eighty eight", "eighty nine", "ninety", "ninety one", "ninety two",
+    "ninety three", "ninety four", "ninety five", "ninety six", "ninety seven",
+    "ninety eight", "ninety nine" };
+    NumToText = StNumArray[Number];
 
-	while (Number > 0)
-	{
-		Remainder = Number % 10;
-		Number /= 10;
-		Number2 = Number2 * 10 + Remainder;
-	}
-	return Number2;
+    return NumToText;
 }
 
-
-
-int GetThreeDigits(int Number)
+string NumberToText(long long Number)
 {
-	Number = ReverseNumber(Number);
-	string stNumber = to_string(Number);
-	string HNumber = stNumber.substr(3, stNumber.length());
+    string NumToText = "";
 
-	return ReverseNumber(stoi(HNumber));
-}
+    if (Number <= 99)
+    {
+        NumToText = NumberToText_1_or_2_Digits(Number);
+    }
+    else if (Number <= 999)
+    {
+        NumToText = NumberToText_1_or_2_Digits(Number / 100) + " hundred ";
+        NumToText += NumberToText(Number % 100);
+    }
+    else  if (Number <= 999999)
+    {
+        NumToText = NumberToText(Number / 1000) + " thousand ";
+        NumToText += NumberToText(Number % 1000);
+    }
+    else if (Number <= 999999999)
+    {
+        NumToText = NumberToText(Number / 1000000) + " million ";
+        NumToText += NumberToText(Number % 1000000);
+    }
+    else if (Number <= 999999999999)
+    {
+        NumToText = NumberToText(Number / 1000000000) + " Billion ";
+        NumToText += NumberToText(Number % 1000000000);
+    }
+    else if (Number <= 999999999999999)
+    {
+        NumToText = NumberToText(Number / 1000000000000) + " Trillion ";
+        NumToText += NumberToText(Number % 1000000000000);
+    }
 
-
-
-string TransacteUnitsNumbersSection(int Number)
-{
-	return GetNumbersFrom_1_To_9(Number);
-}
-
-string TransacteComplexNumbersSection(int Number)
-{
-	string stNumber = " ";
-
-	stNumber = GetNodalNumbers((Number / 10) * 10) + " " + GetNumbersFrom_1_To_9(Number % 10);
-
-	return stNumber;
-}
-
-string TransacteTensNumbersSection(int Number)
-{
-	if ((Number % 10) != 0)
-	{
-		if ((Number / 10) < 2)
-			return GetNumbersFrom_11_To_19(Number);
-		else
-			return TransacteComplexNumbersSection(Number);
-	}
-	else
-		return GetNodalNumbers(Number);
-}
-
-string TransacteHundredsNumbersSection(int Number, string Sufixe)
-{
-	string stNumber = "";
-
-		stNumber = TransacteUnitsNumbersSection(Number / 100) + Sufixe;
-
-	return stNumber;
-}
-
-
-void NumbersTransaction(int Number, int DigitsInNumber, string & stNumber)
-{
-	if (DigitsInNumber <= 0)
-	{
-		stNumber += " ";
-	}
-	else if (DigitsInNumber <= 1)
-	{
-		stNumber += TransacteUnitsNumbersSection(Number);
-	}
-	else if (DigitsInNumber <= 2)
-	{
-		stNumber += TransacteTensNumbersSection(Number); 
-	}
-	else if (DigitsInNumber <= 3)
-	{
-		stNumber += TransacteHundredsNumbersSection(Number, " Hundred ");
-		Number = (Number % 100) * 1;
-		NumbersTransaction(Number, CounteDigitsInNumber(Number)*1, stNumber);
-
-	}
-	else if (DigitsInNumber <= 6)
-	{
-		
-		stNumber += TransacteHundredsNumbersSection(GetThreeDigits(Number), " Thousand ");
-		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
-	}
-	else if (DigitsInNumber <= 9)
-	{
-		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
-	}
-	else if (DigitsInNumber <= 12)
-	{
-		NumbersTransaction(Number, CounteDigitsInNumber(Number) * 1, stNumber);
-
-	}
-	else
-	{
-		cout << "The Number is too bigue!!";
-	}
-	
+    return NumToText;
 }
 
 int main()
 {
-	string stNumber = "";
-
-	static int Number = ReadNumber("Enter a Number ? ");
-	int DigitsInNumber = CounteDigitsInNumber(Number * 1);
-
-	NumbersTransaction((Number * 1), DigitsInNumber, stNumber);
-
-	cout << endl << stNumber;
-
-	system("pause>0");
+	cout << NumberToText(ReadNumber());
 	return 0;
 }
