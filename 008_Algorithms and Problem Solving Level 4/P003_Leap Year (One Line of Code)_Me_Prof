@@ -17,7 +17,7 @@ bool IsLeapYear(int Year)
 	except for century years (years ending with 00),which are leap years
 	only if they are perfectly devisible by 400 */
 
-	return ((Year % 100 == 0) && (Year % 400 == 0)) || (Year % 4 == 0);
+	return (Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0);
 	
 }
 
