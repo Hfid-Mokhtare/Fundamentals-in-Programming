@@ -18,8 +18,10 @@ stInfo Read_Info()
 {
 	stInfo Info;
 
-	cout << "Please enter your First Name : "; getline(cin, Info.First_Name);
-	cout << "Please enter your Last Name : "; getline(cin, Info.Last_Name);
+	cout << "Please enter your First Name : "; 
+	getline(cin, Info.First_Name);
+	cout << "Please enter your Last Name : ";
+	getline(cin, Info.Last_Name);
 
 	return Info;
 }
