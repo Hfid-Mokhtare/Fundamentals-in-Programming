@@ -1,5 +1,7 @@
 C++ comments
  comments can be used to explain c++ code, and to make it more readable. 
+ comments are very importente to be in your code because that hepe you and athore programes to understund 
+ the code and the algorithwme that you use to solve the programe,or to explaine how the function is working
  comments can be single-lined or multi-lined.
 
  for short comments use single-line (//).
