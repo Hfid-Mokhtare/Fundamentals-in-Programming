@@ -7,3 +7,7 @@ C++ comments
  for short comments use single-line (//).
  for long comments use multi-line(/**/).
 
+Exemple : 
+
+//this Line will print my name on the screen
+cout << "Mohamed Ali Zeggaf\n";
