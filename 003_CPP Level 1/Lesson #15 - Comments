@@ -11,3 +11,6 @@ Exemple :
 
 //this Line will print my name on the screen
 cout << "Mohamed Ali Zeggaf\n";
+
+/*this Line will print my name on the screen*/
+cout << "Mohamed Ali Zeggaf\n";
