@@ -55,20 +55,21 @@ int main()
 //Q2 :
 
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 int main()
 {
+	short Num1 = 0, Num2 = 0, Num3 = 0;
 
-	short Num1 , Num2 , Num3 ;
-	
+	cout << "Please enter Number1 : ";
+	cin >> Num1;
+	cout << "Please enter Number2 : ";
+	cin >> Num2;
+	cout << "Please enter Number3 : ";
+	cin >> Num3;
 
-	cout << "please enter teh first number : "; cin >> Num1;
-	cout << "please enter teh second number : "; cin >> Num2;
-	cout << "please enter teh third number : "; cin >> Num3;
-
-	int total = Num1 + Num2 + Num3;
+	short total = Num1 + Num2 + Num3;
 
 
 	cout << Num1 << "+" << endl;
@@ -80,6 +81,7 @@ int main()
 
 	return 0;
 }
+
 
 ===========================================================================
 
