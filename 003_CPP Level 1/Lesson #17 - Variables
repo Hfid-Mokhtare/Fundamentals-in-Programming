@@ -32,25 +32,23 @@ using namespace std;
 int main()
 {
 	string FullName = "Mohammed Ali Zeggaf";
-	short age = 18;
-	string City = "tangier";
-	string Country = "Morocco";
-	float MonthySalary = 5000;
-	float YearlySalary = MonthSalary * 12;
-	char Grnder = 'M';
-	bool isMaried = false;
+short Age = 18;
+string City = "tangier";
+string Country = "Morocco";
+float MonthlySalary = 5000;
+float YearlySalary = MonthlySalary * 12;
+char Gender = 'M';
+bool isMarried = false;
 
-	cout << "************************************\n";
-	cout << "Name : " << FullName << endl;
-	cout << "Age : " << age << " Years."<<endl;
-	cout << "City : " << City << endl;
-	cout << "Month Salary : " << MonthSalary << endl;
-	cout << "Yearly Salary : " << YearlySalary << endl;
-	cout << "Grnder : " << Grnder << endl;
-	cout << "Maried : " << Maried << endl;
-
-
-	cout << "************************************\n";
+cout << "************************************\n";
+cout << "Name : " << FullName << endl;
+cout << "Age : " << Age << " Years." << endl;
+cout << "City : " << City << endl;
+cout << "Monthly Salary : " << MonthlySalary << endl;
+cout << "Yearly Salary : " << YearlySalary << endl;
+cout << "Gender : " << Gender << endl;
+cout << "Married : " << isMarried << endl;
+cout << "************************************\n";
 
 
 
