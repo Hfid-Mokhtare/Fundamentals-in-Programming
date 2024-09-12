@@ -6,37 +6,44 @@ using namespace std;
 
 int main()
 {
+	//those are my variables for the user
 	string FullName ;
-	short age ;
+	short Age =0;
 	string City ;
 	string Country ;
-	float MonthlySalary ;
+	float MonthlySalary = 0;
 	char Gender ;
-	bool isMarried ;
+	bool isMarried;
 
-	cout << "please enter your Full Name \n"; cin >> FullName;
-	cout << "please enter your age \n"; cin >> age;
-	cout << "please enter your City \n"; cin >> City;
-	cout << "please enter your Country \n"; cin >> Country;
-	cout << "please enter your Monthly Salary \n"; cin >> MonthlySalary;
-	cout << "please enter your Gender (M/F) \n"; cin >> Gender;
-	cout << "are you maried ? (true/false) \n"; cin >> isMarried;
+	//asking the user to enter his informations
+	cout << "Please enter your Full Name : ";
+	cin >> FullName;
+	cout << "Please enter your Age : ";
+	cin >> Age;
+	cout << "Please enter your City : ";
+	cin >> City;
+	cout << "Please enter your Country : ";
+	cin >> Country;
+	cout << "Please enter your Monthly Salary : ";
+	cin >> MonthlySalary;
+	cout << "Please enter your Gender : ";
+	cin >> Gender;
+	cout << "Are you married (1/0) : ";
+	cin >> isMarried;
 
 	float YearlySalary = MonthlySalary * 12;
 
-	cout << "************************************\n";
+
+	//Print the user information
+	cout << "\n************************************\n";
 	cout << "Name : " << FullName << endl;
-	cout << "Age : " << age << " Years." << endl;
+	cout << "Age : " << Age << " Years." << endl;
 	cout << "City : " << City << endl;
-	cout << "Country : " << Country << endl;
-	cout << "Month Salary : " << MonthlySalary << endl;
+	cout << "Monthly Salary : " << MonthlySalary << endl;
 	cout << "Yearly Salary : " << YearlySalary << endl;
 	cout << "Gender : " << Gender << endl;
 	cout << "Married : " << isMarried << endl;
-
-
 	cout << "************************************\n";
-
 
 
 
