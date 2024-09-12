@@ -1,3 +1,28 @@
+Data types divise to three categories : 
+
+# FUNDAMENTALS : 
+	-Integral Type : - int    : - whole number      : 712
+			  - char   : - singel character  : 'A'
+	-Floating Type : - float  : - flaoting point    : 14.5
+			  - double : - floating point    : 14.5
+	-Boolean Type   : - bool   : - true or false
+	-string Type    : - string : - text              : "Mohammed"
+	-Void Type      : - void   : - Empty
+	-Wide charater  : - wchar_t: - Unicode
+# DERIVES :
+	-Function
+	-Array
+	-Pointer
+	-Reference
+
+#USER-DEFINED :
+	-Class
+	-Structure
+	-Union
+	-Enum
+	-Type Def
+
+
 //Q1 :
 
 #include <iostream>
