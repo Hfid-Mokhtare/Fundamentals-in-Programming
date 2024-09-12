@@ -61,23 +61,30 @@ cout << "************************************\n";
 //Q2 :
 
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 int main()
 {
-	
-	short Num1=20,Num2=30,Num3=10;
+	short Num1 = 0, Num2 = 0, Num3 = 0;
+
+	cout << "Please enter Number1 : ";
+	cin >> Num1;
+	cout << "Please enter Number2 : ";
+	cin >> Num2;
+	cout << "Please enter Number3 : ";
+	cin >> Num3;
+
 	short total = Num1 + Num2 + Num3;
-	
 
-	cout << Num1<<"+"<<endl;
-	cout << Num2 <<"+" << endl;
+
+	cout << Num1 << "+" << endl;
+	cout << Num2 << "+" << endl;
 	cout << Num3 << endl;
-	cout << "----------------------"<< endl;
-	cout <<"total = "<< total << endl;
+	cout << "----------------------" << endl;
+	cout << "total = " << total << endl;
 
-	
+
 	return 0;
 }
 
