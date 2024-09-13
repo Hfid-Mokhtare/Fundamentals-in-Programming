@@ -1,22 +1,23 @@
 //Exersise :
 
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 int main()
 {
-	short num1, num2;
+	short Num1, Num2;
 
-	cout << "please enter the first number : "; cin >> num1;
-	cout << "please enter the second number : "; cin >> num2;
+	cout << "Please enter the firshte Number : ";
+	cin >> Num1;
+	cout << "Please enter the firshte Number : ";
+	cin >> Num2;
 
-	cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
-	cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
-	cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
-	cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-	cout << num1 << " % " << num2 << " = " << num1 % num2 << endl;
-
+	cout << Num1 << " + " << Num2 << " = " << Num1 + Num2 << endl;
+	cout << Num1 << " - " << Num2 << " = " << Num1 - Num2 << endl;
+	cout << Num1 << " * " << Num2 << " = " << Num1 * Num2 << endl;
+	cout << Num1 << " / " << Num2 << " = " << Num1 / Num2 << endl;
+	cout << Num1 << " % " << Num2 << " = " << Num1 % Num2 << endl;
 
 
 	return 0;
