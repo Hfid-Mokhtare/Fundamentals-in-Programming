@@ -10,7 +10,7 @@ int main()
 
 	cout << "Please enter the firshte Number : ";
 	cin >> Num1;
-	cout << "Please enter the firshte Number : ";
+	cout << "Please enter the Seconde Number : ";
 	cin >> Num2;
 
 	cout << Num1 << " + " << Num2 << " = " << Num1 + Num2 << endl;
@@ -28,17 +28,18 @@ int main()
 // problem #7 :
 
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 int main()
 {
-	short num;
+	float Num1;
 
-	cout << "please enter a number : "; cin >> num;
-	
-	cout << "the Half of the Number is " << num / 2 << endl;
-	
+	cout << "Please enter the firshte Number : ";
+	cin >> Num1;
+
+	cout << "the half of " << Num1 << " is : " << Num1 / 2;
+
 	return 0;
 }
 
