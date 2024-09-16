@@ -373,30 +373,31 @@ int main()
 // problem #43 :
 
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 int main()
 {
 	short Days, Hours, Minutes, Seconds;
-    int Task_duration_in_seconds;
-	short Remainder = 0;
+	unsigned int Task_duration_in_seconds;
+	short Remainder;
 
-	cout << "please enter the Task duration in seconds : "; cin >> Task_duration_in_seconds;
-
+	cout << "please enter theTask duration in seconds : "; cin >> Task_duration_in_seconds;
+	
 	Days = Task_duration_in_seconds / (24 * 60 * 60);
-	Remainder = Task_duration_in_seconds % (Days * 24 * 60 * 60);
+	Remainder = Task_duration_in_seconds % (24 * 60 * 60);
 
 	Hours = Remainder / (60 * 60);
-	Remainder = Remainder % (Hours * 60 * 60);
+	Remainder = Remainder % (60 * 60);
 
-	Minutes = Remainder / (60);
-	Remainder = Remainder % (Minutes * 60);
+	Minutes = Remainder / 60;
+	Remainder = Remainder % 60;
 
 	Seconds = Remainder;
-
-	cout << floor(Days) << ":" << floor(Hours) << ":" << floor(Minutes) << ":" << floor(Seconds) << endl;
 	
+
+	cout << Days << ":" << Hours << ":" << Minutes << ":" << Seconds << ":" << endl;
+
 	return 0;
 }
 
