@@ -253,12 +253,13 @@ using namespace std;
 
 int main()
 {
-	short num;
-	cout << "please enter a number : "; cin >> num;
+	short Num;
+	cout << "please enter a number : ";
+	cin >> Num;
 	
-	cout << pow(num,2) << endl;
-	cout << pow(num, 3) << endl;
-	cout << pow(num, 4) << endl;
+	cout << pow(Num,2) << endl;
+	cout << pow(Num, 3) << endl;
+	cout << pow(Num, 4) << endl;
 
 	return 0;
 }
