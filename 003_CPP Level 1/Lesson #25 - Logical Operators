@@ -155,4 +155,46 @@ int main()
 
 	return 0;
 }
+--------------------------------------------------------------------------------
+#HomeWork: 
+//1
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	
+
+	cout << "12 >= 12 is " << (12 >= 12) << endl;
+	cout << "12 > 7 is " << (12 > 7) << endl;
+	cout << "8 < 6 is " << (8 < 6) << endl;
+	cout << "8 = 6 is " << (8 == 6) << endl;
+	cout << "12 <= 12 is " << (12 <= 12) << endl;
+	cout << "7 = 5 is " << (7 == 5) << endl;
+
+	cout << "Not (12 >= 12) " << !(12 >= 12) << endl;
+	cout << "Not(12 < 7) " << !(12 < 7) << endl;
+	cout << "Not (8 < 6) " << !(8 < 6) << endl;
+	cout << "Not (8 = 6) " << !(8 == 6) << endl;
+	cout << "Not (12 <= 12) " << !(12 <= 12) << endl;
+	cout << "Not (7 = 5) " << !(7 == 5) << endl;
+	cout << "1 and 1 " << (1 && 1) << endl;
+	cout << "True and 0 " << (1 && 0) << endl;
+	cout << "0 or 1 " << (0 || 1) << endl;
+	cout << "0 or 0 " << (0 || 0) << endl;
+	cout << "Not 0 " << !0 << endl;
+	cout << "!(1 or 0) " << !(1 || 0) << endl;
+
+	cout << "(7 = 7) and (7 < 5) " << ((7 == 7) && (7 < 5)) << endl;
+	cout << "(7 = 7) or (7 < 5) " << ((7 == 7) || (7 < 5)) << endl;
+	cout << "(7 < 7) or (7 > 5) " << ((7 < 7) || (7 > 5)) << endl;
+	cout << "Not (7 < 7) and (7 > 5) " << (!(7 < 7) && (7 > 5)) << endl;
+	cout << "(7 = 7) and Not (7 < 5) " << ((7 == 7) && !(7 < 5)) << endl;
+	
+	
+	return 0;
+}
+
 
