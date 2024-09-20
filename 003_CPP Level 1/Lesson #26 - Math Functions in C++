@@ -8,12 +8,12 @@ using namespace std;
 
 int main()
 {
-	float diagonal, side;
+	float A, B;
 
-	cout << " enter the side : "; cin >> side;
-	cout << " enter the diagonal : "; cin >> diagonal;
+	cout << " enter the side : "; cin >> A;
+	cout << " enter the diagonal : "; cin >> B;
 
-	cout <<  "the rectangle area is : "<< side * sqrt(pow(diagonal, 2) - pow(side, 2)) <<endl;
+	cout <<  "the rectangle area is : "<< A * sqrt(pow(B, 2) - pow(A, 2)) <<endl;
 
 	return 0;
 }
