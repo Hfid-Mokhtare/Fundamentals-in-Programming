@@ -13,7 +13,7 @@ int main()
 	cout << " enter the side : "; cin >> A;
 	cout << " enter the diagonal : "; cin >> B;
 
-	cout <<  "the rectangle area is : "<< A * sqrt(pow(B, 2) - pow(A, 2)) <<endl;
+	cout <<  " the rectangle area is : "<< A * sqrt(pow(B, 2) - pow(A, 2)) <<endl;
 
 	return 0;
 }
@@ -55,7 +55,8 @@ int main()
 {
 	const float Pi = 3.14;
 	float Diameter;
-	cout << "please enter the diameter : "; cin >> Diameter;
+	cout << " please enter the diameter : "; 
+	cin >> Diameter;
 
 
 
@@ -80,7 +81,9 @@ int main()
 {
 	const float Pi = 3.14;
 	float Square_rib;
-	cout << "please enter the Square rib : "; cin >> Square_rib;
+
+	cout << " please enter the Square rib : ";
+	cin >> Square_rib;
 
 	cout << ceil(Pi * pow(Square_rib, 2) / 4) << endl;
 
@@ -103,7 +106,8 @@ int main()
 	const float Pi = 3.14;
 	float Circumference;
 
-	cout << "please enter the Circumference : "; cin >> Circumference;
+	cout << "please enter the Circumference : "; 
+	cin >> Circumference;
 
 
 	cout << floor(pow(Circumference, 2) / (4 * Pi)) << endl;
@@ -167,14 +171,16 @@ int main()
 // problem #31 :
 
 #include <iostream>
-#include <cmath>
+#include <cmath> 
+
 using namespace std;
 
 
 int main()
 {
 	float num;
-	cout << "please enter a number : "; cin >> num;
+	cout << "please enter a number : "; 
+ 	cin >> num;
 
 	cout << round(pow(num, 2)) << endl;
 	cout << round(pow(num, 3)) << endl;
