@@ -1,87 +1,37 @@
-// Q1 : Conbert string st1 = "43.22" to double,float,and int
-
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-int main()
-{
+
+int main() {
+	
 	string st1 = "43.22";
-
-	double str_to_double = stod(st1);
-	float str_to_float = stof(st1);
-	int str_to_int = stoi(st1);
-
-	cout << "double = " << str_to_double << endl;
-	cout << "float = " << str_to_float << endl;
-	cout << "int = " << str_to_int << endl;
-
-
-  return 0;
-}
-
-****************************************************************************************
-
-// Q2 : Conbert integer N1 = 20 to string
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main()
-{
 	int N1 = 20;
-
-	string int_to_str = to_string(N1);
-	
-	cout << "string = " << int_to_str << endl;
-
-  return 0;
-}
-
-****************************************************************************************
-
-// Q3 : Conbert double N2 = 33.5 to string
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main()
-{
 	double N2 = 33.5;
-
-	string double_to_str = to_string(N2);
-	
-	cout << "string = " << double_to_str << endl;
-
-  return 0;
-}
-
-****************************************************************************************
-
-// Q4 : Conbert float N3 = 55.23 to string,and inter.
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main()
-{
 	float N3 = 55.23;
 
-	string float_to_str = to_string(N3);
-	int float_to_int_1 = N3;
-	int float_to_int_2 = (int)N3;
-	int float_to_int_3 = int(N3);
-
-	cout << "string = " << float_to_str << endl;
-	cout << "string = " << float_to_int_1 << endl;
-	cout << "string = " << float_to_int_2 << endl;
-	cout << "string = " << float_to_int_3 << endl;
+	cout << "st1 = " << st1 << endl;
+	cout << "N1 = " << N1 << endl;
+	cout << "N2 = " << N2 << endl;
+	cout << "N3 = " << N3 << endl;
 
 
-  return 0;
+	cout << "string \"st1\" to doubel : " << stod(st1) << endl;
+	cout << "string \"st1\" to float : " << stof(st1) << endl;
+	cout << "string \"st1\" to int : " << stoi(st1) << endl;
+
+	cout << "integer \"N1\" to string : " << to_string(N1) << endl;
+
+	cout << "double \"N2\" to string : " << to_string(N2) << endl;;
+
+	cout << "float \"N3\" to string : " << to_string(N3) << endl;
+	cout << "float \"N3\" to int : " << int(N3) << endl;
+
+
+
+
+
+
+	return 0;
 }
-
-
