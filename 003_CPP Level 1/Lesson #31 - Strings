@@ -9,23 +9,27 @@
 
 using namespace std;
 
-int main()
-{
-	string Nam_str1, str2, str3;
 
-	cout << "please enter your name : "; getline(cin, Nam_str1);
-	cout << "please enter  number1 : "; cin >> str2;
-	cout << "please enter  number2 : "; cin >> str3;
+int main() {
+	
+	string st1, st2, st3;
 
-	cout << "***********************************************\n";
+	cout << "Please enter string1 : ";
+	getline(cin, st1);
+	cout << "Please enter string2 : ";
+	cin >> st2;
+	cout << "Please enter string3 : ";
+	cin >> st3;
 
-	cout << "The Length of String1 is : " << Nam_str1.length()<<endl;
-	cout << "Character at 0, 2, 4, 7 are : " << Nam_str1[0] << Nam_str1[2] << Nam_str1[4] << Nam_str1[7] << endl;
-	cout << "Concatenating String2 and String3 = " << str2 + str3 << endl;
+	cout << "**********************************" << endl;
+	cout << "the length of string1 is : " << st1.length() << endl;
+	cout << "caracters at 2 , 4 , 5 , 7 are : ";
+	cout << st1[1] << " " << st1[3] << " " << st1[5] << " " << st1[6] << endl;
+	cout << "Concatunating string1 and string2 : ";
+	cout << st3 + st2;
 
-	int multiplication = stoi(str2) * stoi(str3);
+	
+	
 
-	cout << str2 << " * " << str3 << " = " << multiplication << endl;
-
-  return 0;
+	return 0;
 }
