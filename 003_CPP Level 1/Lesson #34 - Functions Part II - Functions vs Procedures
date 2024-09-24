@@ -1,53 +1,37 @@
-//Q1 : 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-void MyProcedures()
-{
-	int Num1, Num2;
 
-	cout << "Please enter Number1 : "; cin >> Num1;
-	cout << "Please enter Number2 : "; cin >> Num2;
-	cout << "***************************************\n";
+void MySumProcedure()
+{
+	short Num1, Num2;
+	cout << "Please enter Number2 : ";
+	cin >> Num1;
+	cout << "Please enter Number2 : ";
+	cin >> Num2;
+	cout << "**************************\n";
 	cout << Num1 + Num2;
 
 }
 
-
-int main()
+short MySumFunction()
 {
-	MyProcedures();
-	
-
-  return 0;
-}
-
-************************************************************************
-
-//Q2 :
-
-#include <iostream>
-#include <string>
-
-using namespace std;
-
-int MyProcedures()
-{
-	int Num1, Num2;
-
-	cout << "Please enter Number1 : "; cin >> Num1;
-	cout << "Please enter Number2 : "; cin >> Num2;
-	cout << "***************************************\n";
+	short Num1, Num2;
+	cout << "Please enter Number2 : ";
+	cin >> Num1;
+	cout << "Please enter Number2 : ";
+	cin >> Num2;
+	cout << "**************************\n";
 	return Num1 + Num2;
-
 }
 
-int main()
-{
-	cout<< MyProcedures();
+int main() {
 	
+	MySumProcedure();
+	cout << endl;
+	cout << MySumFunction();
 
-  return 0;
+	return 0;
 }
