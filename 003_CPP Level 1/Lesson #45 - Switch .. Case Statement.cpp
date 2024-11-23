@@ -50,7 +50,7 @@ int main()
 	char OperationType;
 
 	ReadNum(Num1, Num2, OperationType);
-	;
+	
 	PrintResult(CheckOperationType(Num1, Num2, OperationType));
 
 	return 0;
