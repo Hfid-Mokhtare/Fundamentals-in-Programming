@@ -1,5 +1,5 @@
 // Q1 :  getline(cin, <variable name to input in>)
-//there is a nother methode to reade data whitout problem , (i learn this methote in cours number 7 and i not it here to remanber it)
+//there is a nother methode to reade data whitout problem , (i learn this methote in cours number 7 and i note it here to remanber it)
 
 // Usage of std::ws will extract allthe whitespace character
 //getline(cin >> ws,<variable name to input in>);
