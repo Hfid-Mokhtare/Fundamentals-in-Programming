@@ -202,31 +202,52 @@ int main()
 
 ========================================
 
-	#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
+bool IsNumberInArr(int ArrOfRandomN[100],int length, int Num)
+{
 
+	for (int i = 0; i < length; i++)
+	{
+		if (ArrOfRandomN[i] == Num)
+		{
+			return false;
+		}
+	}
+	return true;
+}
 
-int GetRundomNumber(int From ,int To, int N_Elemenate)
+int GetRundomNumber(int From ,int To)
 {
 	int Num = rand();
 	int RandomN = (Num + rand()) % (To - From + 1) + From;
-	vector <int> Elemenate;
+	return RandomN;
+}
 
-	Elemenate.push_back(N_Elemenate);
 
-	for (int NumberInV : Elemenate)
+void GetArryOfRandomNumber(int ArrOfRandomN[100], int length)
+{
+	int Num;
+	int counter=0;
+
+	while (counter < length)
 	{
-		if (RandomN != NumberInV)
+		Num = GetRundomNumber(0, length - 1);
+		if (IsNumberInArr(ArrOfRandomN,length, Num) == false)
 		{
 			continue;
 		}
-	}
+		else
+		{
+			ArrOfRandomN[counter] = Num;
+			counter++;
+		}
 
-	return (randomN + rand()) % (To - From + 1) + From;
+	}
 }
 
 void FillArrayWitheOrderedNumber(int Arr[100],int length)
@@ -247,47 +268,20 @@ void CopyArray(int ArrSource[100], int ArrDestination[100], int arrLength)
 		counter++;
 
 	}
-	
-}
-
-void ShuflingArray1(int Arr[100], int length)
-{
-
-	int Arr2[100];
-	int RandomN=length+5;
-
-	CopyArray(Arr, Arr2, length);
-
-	for (int i = 0; i < length; i++)
-	{
-		RandomN = GetRundomNumber(0, length, RandomN);
-		if (Arr2[RandomN] != NULL)
-		{
-			Arr[i] = Arr2[RandomN];
-			Arr2[RandomN] = NULL;
-		}
-		
-	}
-
 }
 
 void ShuflingArray2(int Arr[100], int length)
 {
-
 	int Arr2[100];
-	int RandomN = length+5;
+	int ArrOfRandomN[100];
+	int RandomN;
 
 	CopyArray(Arr, Arr2, length);
+	GetArryOfRandomNumber(ArrOfRandomN, length);
 
 	for (int i = 0; i < length; i++)
 	{
-		RandomN = GetRundomNumber(0, length,RandomN);
-		if (Arr2[RandomN] != NULL)
-		{
-			Arr[i] = Arr2[RandomN];
-			Arr2[RandomN] = NULL;
-		}
-
+		Arr[i] = Arr2[ArrOfRandomN[i]];
 	}
 
 }
@@ -302,10 +296,6 @@ void PrintArray(int Arr[100], int length)
 }
 
 
-
-
-
-
 int main()
 {
 	//Seeds the random number generator in C++, called only once
@@ -316,14 +306,13 @@ int main()
 	cin >> length;
 
 	int Arr1[100];
-	
 
 	FillArrayWitheOrderedNumber(Arr1, length);
 
 	cout << "the array before shufling : ";
 	PrintArray(Arr1, length);
 
-	ShuflingArray1(Arr1, length);
+	ShuflingArray2(Arr1, length);
 
 	cout << "the array after shufling : ";
 	PrintArray(Arr1, length);
