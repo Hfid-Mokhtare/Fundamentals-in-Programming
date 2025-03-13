@@ -1,0 +1,10 @@
+Null : is a special value in a database that represents the absence of a value in a table column
+
+
+
+when an attribut is Null this mean : - the value is unknown
+                                     - the value is messing
+                                     - the value is emplty
+
+when an attribut is Null this isn't mean : - the value is zero
+                                           
