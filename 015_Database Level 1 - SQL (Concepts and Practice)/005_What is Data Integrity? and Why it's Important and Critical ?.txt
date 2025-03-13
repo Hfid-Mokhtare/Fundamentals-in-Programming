@@ -1,0 +1,5 @@
+Data Integrity is about check all your atribut to be correct and to do your checks for all attributs, befor doing your quieris
+Data Integrity : is to make the data complete and no error on it
+
+
+
