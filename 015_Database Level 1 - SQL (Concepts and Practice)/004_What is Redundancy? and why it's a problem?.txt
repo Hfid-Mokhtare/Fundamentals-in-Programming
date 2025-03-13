@@ -1,0 +1,15 @@
+Redundancy is to : -storing the same information multiple times
+
+in some use case Redundancy is a good solution to improve the speed to the programe
+
+Redundancy Poblem cuse : - More wasted space 
+- Data inconistancy
+- Data corruption
+- Missing/incomplete Data
+- Data Integrity Problem
+- Hard to maintain
+
+
+we can solve the problem of Redundancy by using the techniques of : Normalization
+
+Normalization is the process of organizing data in a database in a way that reduces redundancy.
