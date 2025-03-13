@@ -1,0 +1,13 @@
+Primaty Key is a unique identifier for each record and serves as reference point for
+other tables that have a relationship with the tables
+
+Primary Key shoud be : - Unique 
+                       - Not Null 
+                       - Not changed
+
+the good practic is to make the Primary Key a number.
+-----------------------------------------------------------------------
+
+if an attribute is refrance to a Primary Key is becom : Foreign Key
+
+Foreign Key is establishes a relationship between two tables
