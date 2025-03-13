@@ -1,0 +1,10 @@
+A database is an organized collection of data so that it can be easily accessed.
+To manage these database, Database Management System (DBMS) are used.
+
+DBMS : Non-Relational database like ( file system, xml, ...)
+RDBMS : - Relational databade, is like DBMS but with relations,like (SQLServer, Oracle, MySQL,...)
+        - Data that is stored in an organized fashion in tables containing rows and columns along with relations between these tables.
+        - Row = Entity = Rcord
+        - Column = Field = Attribute
+
+Table = Entity Set
