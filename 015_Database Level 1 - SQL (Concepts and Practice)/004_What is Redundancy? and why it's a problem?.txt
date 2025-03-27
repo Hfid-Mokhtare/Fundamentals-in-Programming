@@ -1,8 +1,8 @@
 Redundancy is to : -storing the same information multiple times
 
-in some use case Redundancy is a good solution to improve the speed to the programe
+in some use case Redundancy is a good solution to improve the speed of the programe
 
-Redundancy Poblem cuse : - More wasted space 
+Redundancy Poblem cose : - More wasted space 
 - Data inconistancy
 - Data corruption
 - Missing/incomplete Data
