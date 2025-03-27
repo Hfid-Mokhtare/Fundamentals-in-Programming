@@ -1,0 +1,15 @@
+- using file is an old way and its very slow 
+- using databases is faster and esier to manage your data
+
+==> what SQL ? 
+- SQL : Structured Query Language 
+- used to communicate with DB
+- used to access and manipulate DB
+- it suported by all other DB thechnologies : MySQL , oracle , TSQL
+
+==> Types of SQL Statements : 
+- Data Definition Language (DDL) : - Create - Drop - Alter - Truncate
+- Data Manipulation Language (DML) : - Insert - Update - Delete
+- Data Control Language (DCL) : - Grant - Revoke
+- Transaction Control Language (TCL) : - Commit - Rallback - Savepoint
+- Data Query Language (DQL) : - Select
