@@ -1,0 +1,25 @@
+==> DBMS : 
+- Database Management System
+- Example : Normal File System, XML..etc
+- Data Stored In Files no relations,
+- Uses diffrent datastructures.
+- One user can access data at a time.
+- Small Data, Less Scalable, Backup is hard
+- less secured
+- No mormalization: No data integrity Or concestancy, more redundancy
+- Limited Data Sharing
+- Hard to deal with
+
+==> RDBMS : 
+- Relational Database Management System
+- Example :MySQL, Oracle,
+- MongoDB, SQL Server..etc.
+- Data stored In Tabular form (Tables and relations between them)
+- Uses a SQL to retrieve data from the database
+- Multi-users can access data
+- Larg Data, More Scalable, easy backup
+- More Secured
+- Normalization: strong data integrity, consistency, less redundancy
+- Centralized Data Sharing
+- Very Easy to deal with
+
