@@ -3,6 +3,7 @@
 - Data Integrity : is to make the data complete and no error on it
 - by making the constrantes and condition you improve the integrety
 - Data Integrity is realy very importante for the beseneses and for the client 
+- to creat a strong data is importente than make the queries
 
 
 
