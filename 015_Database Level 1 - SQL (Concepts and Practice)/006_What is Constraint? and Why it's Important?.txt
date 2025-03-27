@@ -1,1 +1,13 @@
+what is constraint ?
+- are rules and conditions that are applied to the data to ensure its integrity and consistency 
+- by using constraints, you can help ensure that your data is accurate, consistent, and easy to manage.
 
+==> principle constraints used in databases : 
+- Primary Key constraint
+- Foreign Key constraint
+- Unique constraint
+- Not Null constraint
+- Check constraint
+
+==> what is the difference between Primary Key Constraint and Unique Constraint ? 
+- Primary Key is Unique but it does not allow NULL , while Unique allows NULL.
