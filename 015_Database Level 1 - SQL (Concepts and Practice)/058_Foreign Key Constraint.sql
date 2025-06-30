@@ -26,7 +26,7 @@ CREATE TABLE Order_C (
 );
 
 
--- of you can use alter table : 
+-- or you can use alter table : 
 ALTER TABLE Order_C 
 ADD FOREIGN KEY (customer_id) REFERENCES client(ID);
 
