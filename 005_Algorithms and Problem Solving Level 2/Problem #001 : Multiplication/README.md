@@ -11,7 +11,7 @@ A C++ console application that generates a clean, well-aligned multiplication ta
 ## 📸 Output Preview
 Here is how the table looks when executed:
 
-![Problem #001 : Multiplication](Screenshot 2026-06-23 184011.png)
+![Problem #001 : Multiplication](multiplication_table_output.png)
 
 *(Note: Replace "image_36375f.png" with the actual path/name of your image inside the repository)*
 
