@@ -1,61 +1,80 @@
 //Me : 
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
 using namespace std;
 
-int ReadPositiveNumber(string Message)
-{
-	int Number = 0;
-	do
-	{
-		cout << Message << endl;
-		cin >> Number;
+enum entypeChar { SmallLetter = 1, CapitalLetter = 2, SpecialCharacter = 3, Digit = 4 };
 
-	} while (Number <= 0);
-
-	return Number;
-}
-
-int PrintRandomNumber(int From, int To)
-{
-	int RandNum = rand() % (To - From + 1) + From;
-	return RandNum;
-}
-
-string GetRandomCharacter()
-{
-	string Key = "";
-
-	for (int i = 1; i <= 4; i++)
-	{
-		Key = Key + char(PrintRandomNumber(65, 90));
-	}
-	
-	return Key;
+int ReadPositiveNumber(string message) {
+    int num = 0;
+    do {
+        cout << message << endl;
+        cin >> num;
+    } while (num < 0);
+    return num;
 }
 
 
-void PrintKeys(int NumOfKeys)
-{
-	for (int i = 1; i <= NumOfKeys; i++)
-	{
-		cout << "Key[" << i << "] : " << GetRandomCharacter() << "-" 
-			<< GetRandomCharacter() << "-" 
-			<< GetRandomCharacter() << "-" 
-			<< GetRandomCharacter() << endl;
-	}
+int RandomNumber(int From, int To) {
+    return rand() % (To - From + 1) + From;
 }
+
+char GetRandomCharacter(entypeChar typeChar) {
+    switch (typeChar) {
+    case entypeChar::SmallLetter : 
+        return char(RandomNumber(97, 122)) ;
+    case entypeChar::CapitalLetter:
+        return char(RandomNumber(65, 90)) ;
+    case entypeChar::SpecialCharacter:
+        return char(RandomNumber(33, 47)) ;
+    case entypeChar::Digit:
+        return char(RandomNumber(48, 57)) ;        
+    }
+}
+
+string GenerateWordOfFourLetters(entypeChar charType, short length) {
+    string word = "";
+
+    for (int i = 1; i <= length; i++) {
+        word += GetRandomCharacter(charType);
+    }
+
+    return word;
+}
+
+string GenerateKey(short length) {
+    string key = "";
+
+    for (int i = 1; i <= length; i++) {
+
+        key += GenerateWordOfFourLetters(entypeChar::CapitalLetter,4);
+
+        if (i < length) {
+            key += "-";
+        }
+    }
+    
+    return key;
+}
+
+void PrintKeysInOrder(int numberOfKeys) {
+    for (int i = 1; i <= numberOfKeys; i++) {
+        cout << "Key [" << i << "] : " << GenerateKey(4) << endl;;
+    
+    }
+}
+
 
 int main()
 {
-    srand((unsigned)time(NULL));
+   srand((unsigned)time(NULL));
+   PrintKeysInOrder(ReadPositiveNumber("Please enter a positive number :"));
 
-	PrintKeys(ReadPositiveNumber("Please enter the Number Of Keys do you want : "));
-
-	return 0;
+    return 0;
 }
+
 
 ===============================================================================================
 
