@@ -19,8 +19,6 @@ int main()
 	*ptr1 = 10;
 	*ptr2 = 20;
 
-	cout << "address : " << endl;
-
 	cout << *ptr1 << endl;
 	cout << *ptr2 << endl;
 
