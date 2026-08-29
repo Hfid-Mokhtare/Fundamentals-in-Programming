@@ -4,7 +4,7 @@ they are fore parte in your memory (RAM)
 2 : Static / Global variables
 
 3 : Stack : local variable / functions / pointers
-    the operating system give you a size in the memory fore your proggrame
+    the operating system give you a size in the memory for your proggrame
     and you don't have permition to use the ather memory juste if you use pointers
     to have accesse to the Heap memory
 
