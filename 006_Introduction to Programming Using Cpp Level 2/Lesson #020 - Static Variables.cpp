@@ -23,15 +23,15 @@ int main()
 {
 	cout << "Withe out using static variable : \n";
 
-	MyFunc();
-	MyFunc();
-	MyFunc();
+	MyFunc(); //1
+	MyFunc(); //1
+	MyFunc(); //1
 
 	cout << "\n Withe using static variable : \n";
 
-	MyFuncstatic();
-	MyFuncstatic();
-	MyFuncstatic();
+	MyFuncstatic(); //1
+	MyFuncstatic(); //2
+	MyFuncstatic(); //3
 
 
 	return 0;
